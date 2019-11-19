@@ -14,8 +14,13 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^5.0.0",
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "express": "^4.17.1"
+=======
+    "express": "^4.17.1",
+    "uuid": "^3.3.3"
+>>>>>>> Mel-InStock
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

@@ -1,0 +1,16 @@
+[
+  {
+    "item": "Product Name Here Here is a very brief description of the product...",
+    "last ordered": "05/24/2018",
+    "location": "Toronto, CAN",
+    "quantity": "12,000",
+    "status": "In Stock"
+  },
+  {
+    "item": "Product Name Here Here is a very brief description of the product...",
+    "last ordered": "05/24/2018",
+    "location": "Toronto, CAN",
+    "quantity": "12,000",
+    "status": "Out of Stock"
+  }
+]
