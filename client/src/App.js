@@ -1,18 +1,20 @@
-import React from "react";
-import Route from "react-router-dom";
-import Locations from "./Locations";
-import Inventory from "./Inventory";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import Header from './Components/Header';
+import Inventory from './Components/Inventory';
+import Locations from './Components/Locations';
 
 function App() {
-  return;
-  <div>
-    <Header />
-    <Switch>
-      <Inventory />
-      <Locations />
-    </Switch>
-  </div>;
+	return (
+		<div className="app">
+			<Header />
+			<Switch>
+				<Route path="/" exact component={Locations} />
+				<Route path="/inventory" component={Inventory} />
+			</Switch>
+		</div>
+	);
 }
 
 export default App;
