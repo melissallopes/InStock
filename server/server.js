@@ -2,10 +2,6 @@
 
 const express = require("express");
 const cors = require("cors");
-<<<<<<< HEAD
-=======
-
->>>>>>> Mel-InStock
 const app = express();
 
 app.use(express.json());
