@@ -42,4 +42,54 @@
 			margin: 0;
 		}
 	}
+	&-button {
+		background-color: $instock-blue;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		position: fixed;
+		bottom: 50px;
+		right: 30px;
+		&-img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+@include medium {
+	.h5info {
+		margin: 5px 0;
+	}
+	.locations {
+		padding: 0 3.125%;
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-title {
+				margin: 48px 0 38px 0;
+			}
+			&-input {
+				width: 20%;
+				margin: 48px 0 38px 0;
+			}
+		}
+		&__info {
+			&-bigbox {
+				margin: 0;
+			}
+			&__box {
+				margin: 0 0 24px 0;
+			}
+			&-tablet {
+				display: flex;
+				justify-content: space-between;
+				padding-right: 3%;
+			}
+			&__firstBox {
+				margin: 10px 0 27px 0;
+			}
+		}
+	}
 }

@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import LocationsMap from './LocationsMap';
 
+import Plus from '../assets/Icons/SVG/Icon-add.svg';
+
 export default class Locations extends Component {
 	state = {
 		locations: []
@@ -24,6 +26,10 @@ export default class Locations extends Component {
 					<input type="text" className="locations__header-input" placeholder="Search" />
 				</div>
 				<LocationsMap data={this.state} />
+
+				<button type="button" className="locations-button">
+					<img src={Plus} alt="upload" className="locations-button-img" />
+				</button>
 			</div>
 		);
 	}
