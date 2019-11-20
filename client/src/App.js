@@ -6,7 +6,6 @@ import Inventory from "./Components/Inventory";
 import Locations from "./Components/Locations";
 
 function App() {
-<<<<<<< HEAD
   return (
     <div className="app">
       <Header />
@@ -16,17 +15,6 @@ function App() {
       </Switch>
     </div>
   );
-=======
-	return (
-		<div className="app">
-			<Header />
-			<Switch>
-				<Route path="/" exact component={Inventory} />
-				<Route path="/locations" component={Locations} />
-			</Switch>
-		</div>
-	);
->>>>>>> master
 }
 
 export default App;

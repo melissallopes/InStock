@@ -15,24 +15,24 @@ class Inventory extends React.Component {
           <div className="inventory__div">
             <div className="inventory__item">
               <h2 className="inventory__label">ITEM</h2>
-              <p>{product.item}</p>
-              <p>{product.description}</p>
+              <p className="inventory__itens-bold">{product.item}</p>
+              <p className="inventory__itens">{product.description}</p>
             </div>
             <div className="inventory__order">
               <h2 className="inventory__label">LAST ORDERED</h2>
-              <p>{product.ordered}</p>
+              <p className="inventory__itens">{product.ordered}</p>
             </div>
             <div className="inventory__location">
               <h2 className="inventory__label">LOCATION</h2>
-              <p>{product.location}</p>
+              <p className="inventory__itens">{product.location}</p>
             </div>
             <div className="inventory__quantity">
               <h2 className="inventory__label">QUANTITY</h2>
-              <p>{product.quantity}</p>
+              <p className="inventory__itens">{product.quantity}</p>
             </div>
             <div className="inventory__status">
               <h2 className="inventory__label">STATUS</h2>
-              <p>{product.status}</p>
+              <p className="inventory__itens">{product.status}</p>
             </div>
           </div>
         );
@@ -40,8 +40,17 @@ class Inventory extends React.Component {
 
       return (
         <div>
-          <h1>INVENTORY</h1>
-          <input className="inventory__input" placeholder="Search"></input>
+          <div className="inventory__initial">
+            <h2 className="inventory__title">Inventory</h2>
+            <input className="inventory__input" placeholder="Search"></input>
+          </div>
+          <div className="inventory__desk-title-row">
+            <h2>Item</h2>
+            <h2>Last Ordered</h2>
+            <h2>Location</h2>
+            <h2>Quantity</h2>
+            <h2>Status</h2>
+          </div>
           <div>{InventoryList}</div>
         </div>
       );
