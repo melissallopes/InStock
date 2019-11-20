@@ -155,7 +155,7 @@
 }
 
 .inventory__title {
-  margin-left: 5vw;
+  margin: 10vw 5vw 2vw 5vw;
   color: #323232;
   font-family: "AvenirBold";
 }
@@ -187,32 +187,47 @@
   color: #afafaf;
   font-family: "AvenirDemi";
   font-size: 15px;
+  margin: 7vw;
+  margin-left: 0;
 }
 
 .inventory__itens {
   font-family: "AvenirRegular";
   font-size: 15px;
+  margin: 7vw;
+  margin-left: 0;
 }
 
 .inventory__itens-bold {
   font-family: "AvenirDemi";
   font-size: 15px;
+  margin: 7vw;
+  margin-left: 0;
 }
 
 @media only screen and (min-width: 768px) {
+  .inventory__title {
+    margin: 5vw;
+    margin-right: 10vw;
+  }
   .inventory__div {
-    border-bottom: solid 0.2vw #e1e1e1;
+    height: 13vw;
+    border-bottom: solid 0.15vw #e1e1e1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     margin: 3.1vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .inventory__initial {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .inventory__desk-title-row {
     display: -webkit-box;
@@ -233,10 +248,131 @@
     width: 22vw;
     height: 7vw;
     padding: 1vw;
-    border-radius: 0.2vw;
+    border-radius: 0.3vw;
     background-position-x: 2vw;
     background-position-y: 2.5vw;
     padding-left: 5vw;
+    margin: 3vw;
+  }
+  .inventory__itens {
+    text-align: center;
+    margin: 1vw;
+    width: 14vw;
+    height: 5vw;
+  }
+  .inventory__desk-status {
+    margin-right: 5vw;
+  }
+  .inventory__desk-itens {
+    margin-right: 6vw;
+  }
+  .inventory__desk-label-item {
+    width: 33vw;
+    margin-left: 3vw;
+  }
+  .inventory__itens-description {
+    width: 33vw;
+  }
+  .inventory__itens-bold {
+    width: 33vw;
+    margin: 1vw auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .inventory__title {
+    margin: auto 0;
+    font-size: 40px;
+  }
+  .inventory__initial {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .inventory__desk-title-row {
+    width: 75vw;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inventory__div {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 75vw;
+    height: 8vw;
+    margin: 0 auto;
+    border-bottom: solid 0.1vw #e1e1e1;
+  }
+  .inventory__input {
+    width: 17.5vw;
+    height: 3.3vw;
+    padding: 1vw;
+    padding-left: 2.8vw;
+    background-position-x: 1vw;
+    background-position-y: 1.2vw;
+    background-size: 1vw;
+    margin-right: 0;
+  }
+  .inventory__itens {
+    width: 6.6vw;
+    height: 2vw;
+  }
+  .inventory__itens-description {
+    width: 24vw;
+  }
+  .inventory__itens-bold {
+    width: 24vw;
+  }
+  .inventory__desk-itens {
+    width: 20vw;
+    margin: 0;
+    width: 10vw;
+    text-align: center;
+    margin-right: 5vw;
+  }
+  .inventory__desk-status {
+    width: 8vw;
+    margin-right: 0vw;
+    text-align: center;
+  }
+  .inventory__desk-label-item {
+    margin: 0;
+  }
+  .inventory__desk-label-itens {
+    margin-right: 2.5vw;
+  }
+  .inventory__status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inventory__quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inventory__location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inventory__order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
