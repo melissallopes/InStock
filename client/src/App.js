@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Inventory from './Components/Inventory';
 import Locations from './Components/Locations';
+import LocationDetail from './Components/LocationsDetail';
 
 function App() {
 	return (
@@ -11,7 +12,15 @@ function App() {
 			<Header />
 			<Switch>
 				<Route path="/" exact component={Inventory} />
-				<Route path="/locations" component={Locations} />
+				<Route path="/locations" exact component={Locations} />
+				<Route
+					path="/locations/:warehouse"
+					render={(props) => (
+						<div>
+							<LocationDetail {...props} />
+						</div>
+					)}
+				/>
 			</Switch>
 		</div>
 	);

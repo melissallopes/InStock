@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const inventoryFile = __dirname + '/../../model/inventory.json';
+const locationsFile = __dirname + '/../../model/locations.json';
 
-let inventory = require(inventoryFile);
+let locations = require(locationsFile);
 const helper = require('../../helper/helper');
 
 //  Get all locations
 router.get('/', (req, res) => {
-	res.json(inventory);
+	res.json(locations);
 });
 
 module.exports = router;

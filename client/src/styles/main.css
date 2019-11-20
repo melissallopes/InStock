@@ -38,7 +38,7 @@
   border-radius: 5px;
   background-image: url("../assets/Icons/SVG/Icon-search.svg");
   background-repeat: no-repeat;
-  background-position: 5% 50%;
+  background-position: 10px 50%;
   padding-left: 30px;
 }
 
@@ -124,11 +124,82 @@
   .locations__info__firstBox {
     margin: 10px 0 27px 0;
   }
+  .locations-button {
+    right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .h5info {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+  .locations {
+    padding: 0 12.5%;
+  }
+  .locations__header-title {
+    font-size: 40px;
+  }
+  .locations-bigTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 22px;
+  }
+  .locations-bigTitle h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #afafaf;
+    font-family: a-demi;
+  }
+  .locations-contact {
+    margin-left: 16%;
+  }
+  .locations-contactInfo {
+    margin-left: 14%;
+  }
+  .locations-categories {
+    margin-left: 7%;
+  }
+  .locations__info-bigbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 24px;
+  }
+  .locations__info__firstBox {
+    display: block;
+    margin: 0 0 24px 0;
+  }
+  .locations__info__box {
+    margin: 0 0 24px 0;
+  }
+  .locations-button {
+    width: 100px;
+    height: 100px;
+    right: 15%;
+    bottom: 10%;
+  }
+  .locations-button-img {
+    width: 40px;
+    height: 40px;
+  }
+  .locations-btn {
+    background-color: transparent;
+    border: none;
+  }
+  .locations-btn :hover {
+    cursor: pointer;
+  }
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: a-regular;
 }
 /*# sourceMappingURL=main.css.map */
