@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
 
 export default class Locations extends Component {
-	render() {
-		return <div>LOC</div>;
-	}
+  render() {
+    return <div>LOC</div>;
+  }
 }

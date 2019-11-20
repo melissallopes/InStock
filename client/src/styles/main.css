@@ -1,4 +1,16 @@
 /* media query for mobile */
 /* media query for tablet */
 /* media query for high pixel density desktops */
+.inventory__input {
+  width: 75vw;
+  height: 15vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.4vw solid #e1e1e1;
+  border-radius: 1.2vw;
+  background-color: #fafafa;
+  resize: none;
+  margin-top: 3vw;
+  padding: 5vw;
+}
 /*# sourceMappingURL=main.css.map */

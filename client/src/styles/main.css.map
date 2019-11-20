@@ -1,9 +1,11 @@
 {
     "version": 3,
-    "mappings": "ACAA,4BAA4B;AAQ1B,4BAA4B;AAO5B,iDAAiD",
+    "mappings": "ACAA,4BAA4B;AAQ1B,4BAA4B;AAO5B,iDAAiD;ACZhD,AAAD,iBAAQ,CAAC;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,mBAAmB;EAC3B,aAAa,EAAE,KAAK;EACpB,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,GAAG;EACf,OAAO,EAAE,GAAG;CACb",
     "sources": [
         "main.scss",
-        "partials/_breakpoints.scss"
+        "partials/_breakpoints.scss",
+        "partials/_inventory.scss",
+        "partials/_colors.scss"
     ],
     "names": [],
     "file": "main.css"
