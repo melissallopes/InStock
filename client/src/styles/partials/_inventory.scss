@@ -1,85 +1,204 @@
 .inventory {
-	&__div {
-		border-bottom: solid 0.2vw $mercury;
-		margin: 10vw 5vw;
-	}
-	&__desk-title-row {
-		display: none;
-	}
+  &__div {
+    border-bottom: solid 0.2vw $mercury;
+    margin: 10vw 5vw;
+  }
+  &__desk-title-row {
+    display: none;
+  }
 
-	&__title {
-		margin-left: 5vw;
-		color: $black;
-		font-family: "AvenirBold";
-	}
-	&__input {
-		margin-left: 5vw;
-		background-image: url(../assets/Icons/SVG/Icon-search.svg);
-		background-repeat: no-repeat;
-		background-position-x: 4vw;
-		background-position-y: 5vw;
-		width: 75vw;
-		height: 15vw;
-		box-sizing: border-box;
-		border: 0.4vw solid $mercury;
-		border-radius: 1.2vw;
-		background-color: $alabaster;
-		resize: none;
-		margin-top: 3vw;
-		padding: 5vw;
-		padding-left: 35px;
-	}
-	&__item {
-		font-family: "AvenirRegular";
-	}
+  &__title {
+    margin: 10vw 5vw 2vw 5vw;
+    color: $black;
+    font-family: "AvenirBold";
+  }
+  &__input {
+    margin-left: 5vw;
+    background-image: url(../assets/Icons/SVG/Icon-search.svg);
+    background-repeat: no-repeat;
+    background-position-x: 4vw;
+    background-position-y: 5vw;
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid $mercury;
+    border-radius: 1.2vw;
+    background-color: $alabaster;
+    resize: none;
+    margin-top: 3vw;
+    padding: 5vw;
+    padding-left: 35px;
+  }
+  &__item {
+    font-family: "AvenirRegular";
+  }
 
-	&__label {
-		color: $silver;
-		font-family: "AvenirDemi";
-		font-size: 15px;
-	}
-	&__itens {
-		font-family: "AvenirRegular";
-		font-size: 15px;
-	}
-	&__itens-bold {
-		font-family: "AvenirDemi";
-		font-size: 15px;
-	}
+  &__label {
+    color: $silver;
+    font-family: "AvenirDemi";
+    font-size: 15px;
+    margin: 7vw;
+    margin-left: 0;
+  }
+  &__itens {
+    font-family: "AvenirRegular";
+    font-size: 15px;
+    margin: 7vw;
+    margin-left: 0;
+  }
+  &__itens-bold {
+    font-family: "AvenirDemi";
+    font-size: 15px;
+    margin: 7vw;
+    margin-left: 0;
+  }
 }
 
 @include medium {
-	.inventory {
-		&__div {
-			border-bottom: solid 0.2vw $mercury;
-			display: flex;
-			justify-content: space-around;
-			margin: 3.1vw;
-		}
-		&__initial {
-			display: flex;
-		}
-		&__desk-title-row {
-			display: flex;
-			color: $silver;
-			font-family: "AvenirDemi";
-			font-size: 8px;
-			text-transform: uppercase;
-			justify-content: space-around;
-		}
-		&__label {
-			display: none;
-		}
+  .inventory {
+    &__title {
+      margin: 5vw;
+      margin-right: 10vw;
+    }
+    &__div {
+      height: 13vw;
+      border-bottom: solid 0.15vw $mercury;
+      display: flex;
+      margin: 3.1vw;
+      align-items: center;
+    }
+    &__initial {
+      display: flex;
+      justify-content: space-between;
+    }
 
-		&__input {
-			border: 0.1vw solid #e1e1e1;
-			width: 22vw;
-			height: 7vw;
-			padding: 1vw;
-			border-radius: 0.2vw;
-			background-position-x: 2vw;
-			background-position-y: 2.5vw;
-			padding-left: 5vw;
-		}
-	}
+    &__desk-title-row {
+      display: flex;
+      color: $silver;
+      font-family: "AvenirDemi";
+      font-size: 8px;
+      text-transform: uppercase;
+      justify-content: space-around;
+    }
+    &__label {
+      display: none;
+    }
+
+    &__input {
+      border: 0.1vw solid #e1e1e1;
+      width: 22vw;
+      height: 7vw;
+      padding: 1vw;
+      border-radius: 0.3vw;
+      background-position-x: 2vw;
+      background-position-y: 2.5vw;
+      padding-left: 5vw;
+      margin: 3vw;
+    }
+    &__itens {
+      text-align: center;
+      margin: 1vw;
+      width: 14vw;
+      height: 5vw;
+    }
+    &__desk-status {
+      margin-right: 5vw;
+    }
+
+    &__desk-itens {
+      margin-right: 6vw;
+    }
+
+    &__desk-label-item {
+      width: 33vw;
+      margin-left: 3vw;
+    }
+    &__itens-description {
+      width: 33vw;
+    }
+    &__itens-bold {
+      width: 33vw;
+      margin: 1vw auto;
+    }
+  }
+}
+
+@include huge {
+  .inventory {
+    &__title {
+      margin: auto 0;
+      font-size: 40px;
+    }
+    &__initial {
+      justify-content: space-around;
+    }
+    &__desk-title-row {
+      width: 75vw;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    &__div {
+      justify-content: space-between;
+      width: 75vw;
+      height: 8vw;
+      margin: 0 auto;
+      border-bottom: solid 0.1vw #e1e1e1;
+    }
+    &__input {
+      width: 17.5vw;
+      height: 3.3vw;
+      padding: 1vw;
+      padding-left: 2.8vw;
+      background-position-x: 1vw;
+      background-position-y: 1.2vw;
+      background-size: 1vw;
+      margin-right: 0;
+    }
+
+    &__itens {
+      width: 6.6vw;
+      height: 2vw;
+    }
+    &__itens-description {
+      width: 24vw;
+    }
+    &__itens-bold {
+      width: 24vw;
+    }
+    &__desk-itens {
+      width: 20vw;
+      margin: 0;
+      width: 10vw;
+      text-align: center;
+      margin-right: 5vw;
+    }
+    &__desk-status {
+      width: 8vw;
+      margin-right: 0vw;
+      text-align: center;
+    }
+    &__desk-label-item {
+      margin: 0;
+    }
+    &__desk-label-itens {
+      margin-right: 2.5vw;
+    }
+    &__status {
+      display: flex;
+      align-items: center;
+    }
+    &__quantity {
+      display: flex;
+      align-items: center;
+    }
+    &__location {
+      display: flex;
+      align-items: center;
+    }
+    &__order {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
