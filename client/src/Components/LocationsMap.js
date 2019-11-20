@@ -13,7 +13,7 @@ export default function LocationsMap(props) {
 							<h5 className="locations__info-warehouse h5info">{data.warehouse}</h5>
 							<h5 className="locations__info-street h5info">{data.street}</h5>
 						</div>
-						<Link to={`/locations/${data.warehouse}`}>
+						<Link to={`/locations/${data.warehouse}?${index}`}>
 							<button type="button">
 								<img src={Arrow} alt="arrow" className="locations__info__warehouseStreet-img" />
 							</button>
