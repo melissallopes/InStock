@@ -1,0 +1,82 @@
+.indet {
+    &__div{
+        margin: 16px 5vw;
+    }
+
+    &__heading{
+        margin-bottom: 16px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+
+        &-sub {
+            display: flex;
+            flex-flow: row;
+            align-items: flex-end;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__backarrow {
+        margin-right: 16px; 
+    }
+
+    &__name {
+        font-family: AvenirBold;
+        font-size: 1.8rem;
+    }
+
+    &__indicator {
+        background: #58A314;
+        width: 88px;
+        height: 24px;
+        font-family: AvenirDemi;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        border-radius: 5px;
+    }
+
+    &__info {
+
+        &-box {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        &-head {
+            text-transform: uppercase;
+            font-family: AvenirDemi;
+            color: $silver;
+            margin-bottom: 16px;
+        }
+
+        &-body {
+            color: $black
+        }
+
+    }
+
+    &__description {
+        margin-bottom: 32px;
+    }
+
+    &__tags {
+        margin-bottom: 40px;
+    }
+
+    &__edit {
+        background: $instock-blue;
+        color: $alabaster;
+        width: 90vw;
+        height: 48px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-size: 1rem;
+
+    }
+}
