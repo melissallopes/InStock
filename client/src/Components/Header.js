@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/Logo/Logo-instock.svg';
 
 export default function Header() {
-	return <div class="header__return">
-<header class="header">
+	return <div className="header__return">
+<header className="header">
     <ul className="header__list">
         <div className="header__elements">
             <Link to="/inventory" className="header__logo-box">
