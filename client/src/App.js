@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './Components/Header';
 import Inventory from './Components/Inventory';
@@ -10,7 +10,8 @@ function App() {
 		<div className="app">
 			<Header />
 			<Switch>
-				<Route path="/" component={Inventory} />
+			<Redirect from="/" to="/inventory" exact component={Inventory}/>
+				<Route path="/inventory" component={Inventory} />
 				<Route path="/locations" exact component={Locations} />
 			</Switch>
 		</div>

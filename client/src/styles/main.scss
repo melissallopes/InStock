@@ -1,8 +1,12 @@
 @import "./partials/breakpoints";
 @import "./partials/fonts";
+@import "./partials/colors";
+
+@import "./partials/header";
 
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: AvenirRegular;
 }
