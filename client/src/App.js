@@ -13,7 +13,7 @@ function App() {
 			<Switch>
 
 				<Redirect from="/" to="/inventory" exact component={Inventory}/>
-				<Route path="/" exact component={Inventory} />
+				<Route path="/" component={Inventory} />
 				<Route path="/locations" exact component={Locations} />
 				<Route
 					path="/locations/:warehouse"
