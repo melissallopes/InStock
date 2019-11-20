@@ -1,4 +1,74 @@
+@font-face {
+  font-family: "a-regular";
+  src: url("../assets/GlobalFont/AvenirNextProLT/regular.otf");
+}
+
+@font-face {
+  font-family: "a-demi";
+  src: url("../assets/GlobalFont/AvenirNextProLT/demi.otf");
+}
+
+@font-face {
+  font-family: "a-bold";
+  src: url("../assets/GlobalFont/AvenirNextProLT/bold.otf");
+}
+
 /* media query for mobile */
 /* media query for tablet */
 /* media query for high pixel density desktops */
+.h5info {
+  margin: 10px 0;
+  font-weight: 100;
+}
+
+.locations {
+  padding: 0 5%;
+}
+
+.locations__header-title {
+  font-family: a-bold;
+  text-transform: capitalize;
+  margin: 32px 0 16px 0;
+}
+
+.locations__header-input {
+  border: 1px solid #afafaf;
+  height: 30px;
+  width: 60%;
+  border-radius: 5px;
+  background-image: url("../assets/Icons/SVG/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  padding-left: 30px;
+}
+
+.locations__info-bigbox {
+  margin: 32px 0 24px;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.locations__info__firstBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.locations__info__box {
+  margin: 15px 0;
+}
+
+.locations__info-warehouse {
+  font-family: a-demi;
+  font-size: 15px;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 /*# sourceMappingURL=main.css.map */
