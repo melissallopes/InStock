@@ -15,7 +15,13 @@ class Inventory extends React.Component {
         return (
           <div className="inventory__div">
             <div className="inventory__item">
+              <img
+                className="inventory__icon-mobile"
+                src={kebabIcon}
+                onClick={this.handleClick}
+              ></img>
               <h2 className="inventory__label">ITEM</h2>
+
               <p className="inventory__itens-bold">{product.item}</p>
               <p className="inventory__itens-description">
                 {product.description}
@@ -37,7 +43,11 @@ class Inventory extends React.Component {
               <h2 className="inventory__label">STATUS</h2>
               <p className="inventory__itens">{product.status}</p>
             </div>
-            <img className="inventory__icon" src={kebabIcon}></img>
+            <img
+              className="inventory__icon"
+              src={kebabIcon}
+              onClick={this.handleClick}
+            ></img>
           </div>
         );
       });
@@ -67,6 +77,10 @@ class Inventory extends React.Component {
       });
     });
   }
+
+  handleClick = event => {
+    return <button className="inventory__button">Remove</button>;
+  };
 }
 
 export default Inventory;
