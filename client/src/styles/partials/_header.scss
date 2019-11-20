@@ -1,0 +1,107 @@
+.header {
+    background: $black;
+
+    &__logo-image{
+        margin-top: 16px;
+        width: 40vw;
+    }
+
+    &__elements {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__nav {
+        margin-top: 16px;
+        display: flex;
+        flex-flow: row;
+    }
+
+    &__link {
+        color: $silver;
+        text-decoration: none;
+    
+        &-active {
+            border-bottom: 5px solid $white;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 16px;
+            color: $white;
+            font-family: AvenirDemi;
+
+        }
+        &-wrapper {
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+}
+
+@include medium {
+    .header {
+        height: 80px;
+        padding-left: 3.125vw;
+        display: flex;
+        align-items: flex-end;
+
+        &__logo{
+            &-box {
+                align-self: center;
+            }
+
+            &-image {
+                width: 16.15vw;
+                margin-top: -80px;
+            }
+
+    }
+
+        &__elements {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 80px;
+        }
+
+        &__link {
+            margin-top: 30px;
+            &-wrapper {
+                width: 10.5vw;
+                margin-right: 5.25vw;
+            }
+        }
+
+        &__nav {
+            height: 80px;
+            margin-left: 5.25vw;
+        }
+    }
+}
+
+@include huge {
+    .header {
+        padding-left: 12.5vw;
+
+        &__link {
+            &-wrapper {
+                margin-right: 3.888vw;
+            }
+        }
+
+        &__logo {
+            &-image {
+                height: 20px;
+            }
+        }
+
+        &__nav {
+            margin-left: 0;
+        }
+
+    }
+}

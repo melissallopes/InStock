@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import axios from "axios";
+import kebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
 
 class Inventory extends React.Component {
   state = {
@@ -36,6 +37,7 @@ class Inventory extends React.Component {
               <h2 className="inventory__label">STATUS</h2>
               <p className="inventory__itens">{product.status}</p>
             </div>
+            <img className="inventory__icon" src={kebabIcon}></img>
           </div>
         );
       });
@@ -59,7 +61,7 @@ class Inventory extends React.Component {
     } else return <div>Loading...</div>;
   }
   componentDidMount() {
-    axios.get("http://localhost:5000/inventory" + "/").then(response => {
+    axios.get("http://localhost:5000/inventory").then(response => {
       this.setState({
         inventory: response.data
       });
