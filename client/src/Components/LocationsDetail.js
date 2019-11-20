@@ -29,8 +29,6 @@ export default class LocationsDetail extends Component {
 					item: res.data
 					// item: res.data[this.props.location.search.split('?')[1]]
 				});
-
-				console.log(this.state.item);
 			}
 		});
 	}
