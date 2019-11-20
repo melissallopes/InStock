@@ -1,3 +1,12 @@
+@import "./partials/colors";
+@import "./partials/fonts";
 @import "./partials/breakpoints";
 @import "./partials/inventory";
-@import "./partials/colors";
+
+@import "./partials/locations";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
