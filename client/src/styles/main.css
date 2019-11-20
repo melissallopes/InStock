@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "a-regular";
+  font-family: "AvenirRegular";
   src: url("../assets/GlobalFont/AvenirNextProLT/regular.otf");
 }
 
 @font-face {
-  font-family: "a-demi";
+  font-family: "AvenirDemi";
   src: url("../assets/GlobalFont/AvenirNextProLT/demi.otf");
 }
 
 @font-face {
-  font-family: "a-bold";
+  font-family: "AvenirBold";
   src: url("../assets/GlobalFont/AvenirNextProLT/bold.otf");
 }
 
@@ -28,7 +28,7 @@
 .inventory__title {
   margin-left: 5vw;
   color: #323232;
-  font-family: "a-bold";
+  font-family: "AvenirBold";
 }
 
 .inventory__input {
@@ -51,22 +51,22 @@
 }
 
 .inventory__item {
-  font-family: "a-regular";
+  font-family: "AvenirRegular";
 }
 
 .inventory__label {
   color: #afafaf;
-  font-family: "a-demi";
+  font-family: "AvenirDemi";
   font-size: 15px;
 }
 
 .inventory__itens {
-  font-family: "a-regular";
+  font-family: "AvenirRegular";
   font-size: 15px;
 }
 
 .inventory__itens-bold {
-  font-family: "a-demi";
+  font-family: "AvenirDemi";
   font-size: 15px;
 }
 
@@ -90,7 +90,7 @@
     display: -ms-flexbox;
     display: flex;
     color: #afafaf;
-    font-family: "a-demi";
+    font-family: "AvenirDemi";
     font-size: 8px;
     text-transform: uppercase;
     -ms-flex-pack: distribute;
@@ -121,7 +121,7 @@
 }
 
 .locations__header-title {
-  font-family: a-bold;
+  font-family: AvenirBold;
   text-transform: capitalize;
   margin: 32px 0 16px 0;
 }
@@ -156,7 +156,7 @@
 }
 
 .locations__info-warehouse {
-  font-family: a-demi;
+  font-family: AvenirDemi;
   font-size: 15px;
   margin: 0;
 }
@@ -245,7 +245,7 @@
     font-size: 13px;
     text-transform: uppercase;
     color: #afafaf;
-    font-family: a-demi;
+    font-family: AvenirDemi;
   }
   .locations-contact {
     margin-left: 16%;
@@ -319,7 +319,7 @@
   text-transform: uppercase;
   margin-bottom: 15px;
   font-size: 15px;
-  font-family: a-demi;
+  font-family: AvenirDemi;
 }
 
 .locDetail__address-shortSt {
@@ -349,7 +349,7 @@
   color: #afafaf;
   text-transform: uppercase;
   font-size: 15px;
-  font-family: a-demi;
+  font-family: AvenirDemi;
 }
 
 .locItem-firstDiv {
@@ -391,7 +391,7 @@
     border-bottom: 2px solid #e1e1e1;
   }
   .locDetail__back-name {
-    font-family: a-bold;
+    font-family: AvenirBold;
   }
   .locDetail-tabletD {
     display: -webkit-box;
@@ -422,7 +422,7 @@
 }
 
 .locItem__big-item {
-  font-family: a-demi;
+  font-family: AvenirDemi;
 }
 
 .locItem__big-div {
@@ -455,7 +455,7 @@
 
 .locItem__title h3 {
   text-transform: uppercase;
-  font-family: a-demi;
+  font-family: AvenirDemi;
   font-size: 10px;
   color: #afafaf;
   margin-top: 40px;
