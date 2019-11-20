@@ -16,7 +16,9 @@ class Inventory extends React.Component {
             <div className="inventory__item">
               <h2 className="inventory__label">ITEM</h2>
               <p className="inventory__itens-bold">{product.item}</p>
-              <p className="inventory__itens">{product.description}</p>
+              <p className="inventory__itens-description">
+                {product.description}
+              </p>
             </div>
             <div className="inventory__order">
               <h2 className="inventory__label">LAST ORDERED</h2>
@@ -45,11 +47,11 @@ class Inventory extends React.Component {
             <input className="inventory__input" placeholder="Search"></input>
           </div>
           <div className="inventory__desk-title-row">
-            <h2>Item</h2>
-            <h2>Last Ordered</h2>
-            <h2>Location</h2>
-            <h2>Quantity</h2>
-            <h2>Status</h2>
+            <h2 className="inventory__desk-label-item">Item</h2>
+            <h2 className="inventory__desk-itens">Last Ordered</h2>
+            <h2 className="inventory__desk-itens">Location</h2>
+            <h2 className="inventory__desk-itens">Quantity</h2>
+            <h2 className="inventory__desk-status">Status</h2>
           </div>
           <div>{InventoryList}</div>
         </div>

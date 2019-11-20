@@ -51,13 +51,15 @@
 @include medium {
   .inventory {
     &__div {
-      border-bottom: solid 0.2vw $mercury;
+      border-bottom: solid 0.15vw $mercury;
       display: flex;
       justify-content: space-around;
       margin: 3.1vw;
+      align-items: center;
     }
     &__initial {
       display: flex;
+      justify-content: space-between;
     }
     &__desk-title-row {
       display: flex;
@@ -66,31 +68,106 @@
       font-size: 8px;
       text-transform: uppercase;
       justify-content: space-around;
-
-      &:first-child {
-      }
     }
     &__label {
       display: none;
     }
 
     &__title {
+      font-size: 35px;
     }
     &__input {
       border: 0.1vw solid #e1e1e1;
       width: 22vw;
       height: 7vw;
       padding: 1vw;
-      border-radius: 0.2vw;
+      border-radius: 0.3vw;
       background-position-x: 2vw;
       background-position-y: 2.5vw;
       padding-left: 5vw;
-    }
-    &__item {
+      margin: 3vw;
     }
     &__itens {
+      width: 14vw;
+      text-align: center;
+    }
+    &__desk-status {
+      margin-right: 7vw;
+    }
+
+    &__desk-itens {
+      margin-right: 6vw;
+    }
+
+    &__desk-label-item {
+      width: 33vw;
+      margin-left: 3vw;
+    }
+    &__itens-description {
+      width: 33vw;
     }
     &__itens-bold {
+      width: 33vw;
+    }
+  }
+}
+
+@include huge {
+  .inventory {
+    &__title {
+      margin: auto 0;
+    }
+    &__initial {
+      justify-content: space-around;
+    }
+    &__desk-title-row {
+      width: 75vw;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    &__div {
+      width: 75vw;
+      margin: 0 auto;
+      border-bottom: solid 0.1vw #e1e1e1;
+    }
+    &__input {
+      width: 17.5vw;
+      height: 3.3vw;
+      padding: 1vw;
+      padding-left: 2.8vw;
+      background-position-x: 1vw;
+      background-position-y: 1.2vw;
+      background-size: 1vw;
+      margin-right: 0;
+    }
+
+    &__itens {
+      width: 6.6vw;
+    }
+    &__desk-itens {
+      width: 15vw;
+      margin: 0;
+    }
+    &__desk-status {
+      width: 15vw;
+      margin-right: 0vw;
+    }
+    &__status {
+      display: flex;
+      align-items: center;
+    }
+    &__quantity {
+      display: flex;
+      align-items: center;
+    }
+    &__location {
+      display: flex;
+      align-items: center;
+    }
+    &__order {
+      display: flex;
+      align-items: center;
     }
   }
 }
