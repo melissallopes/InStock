@@ -16,6 +16,101 @@
 /* media query for mobile */
 /* media query for tablet */
 /* media query for high pixel density desktops */
+.inventory__div {
+  border-bottom: solid 0.2vw #e1e1e1;
+  margin: 10vw 5vw;
+}
+
+.inventory__desk-title-row {
+  display: none;
+}
+
+.inventory__title {
+  margin-left: 5vw;
+  color: #323232;
+  font-family: "a-bold";
+}
+
+.inventory__input {
+  margin-left: 5vw;
+  background-image: url(../assets/Icons/SVG/Icon-search.svg);
+  background-repeat: no-repeat;
+  background-position-x: 4vw;
+  background-position-y: 5vw;
+  width: 75vw;
+  height: 15vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.4vw solid #e1e1e1;
+  border-radius: 1.2vw;
+  background-color: #fafafa;
+  resize: none;
+  margin-top: 3vw;
+  padding: 5vw;
+  padding-left: 35px;
+}
+
+.inventory__item {
+  font-family: "a-regular";
+}
+
+.inventory__label {
+  color: #afafaf;
+  font-family: "a-demi";
+  font-size: 15px;
+}
+
+.inventory__itens {
+  font-family: "a-regular";
+  font-size: 15px;
+}
+
+.inventory__itens-bold {
+  font-family: "a-demi";
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inventory__div {
+    border-bottom: solid 0.2vw #e1e1e1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 3.1vw;
+  }
+  .inventory__initial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .inventory__desk-title-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #afafaf;
+    font-family: "a-demi";
+    font-size: 8px;
+    text-transform: uppercase;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .inventory__label {
+    display: none;
+  }
+  .inventory__input {
+    border: 0.1vw solid #e1e1e1;
+    width: 22vw;
+    height: 7vw;
+    padding: 1vw;
+    border-radius: 0.2vw;
+    background-position-x: 2vw;
+    background-position-y: 2.5vw;
+    padding-left: 5vw;
+  }
+}
+
 .h5info {
   margin: 10px 0;
   font-weight: 100;

@@ -1,11 +1,12 @@
-@import './partials/colors';
-@import './partials/fonts';
+@import "./partials/colors";
+@import "./partials/fonts";
 @import "./partials/breakpoints";
+@import "./partials/inventory";
 
-@import './partials/locations';
+@import "./partials/locations";
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
