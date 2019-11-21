@@ -1,140 +1,142 @@
 .newPage {
-  padding: 0 5%;
-  & h2 {
-    font-family: AvenirDemi;
-    font-size: 25px;
-    text-transform: capitalize;
-    margin: 32px 0;
-  }
-  & h3 {
-    font-family: AvenirDemi;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: $silver;
-    margin-bottom: 8px;
-  }
-  &-input {
-    height: 48px;
-    width: 100%;
-    padding: 0 16px;
-    border: 1px solid $mercury;
-    border-radius: 5px;
-    margin-bottom: 24px;
-    background-color: $alabaster;
-    &::placeholder {
-      color: black;
-    }
-  }
-  &-instock {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    align-items: center;
-  }
-  & h4 {
-    text-transform: capitalize;
-  }
-  &-inputBox {
-    height: 80px;
+	padding: 0 5%;
+	& h2 {
+		font-family: AvenirDemi;
+		font-size: 25px;
+		text-transform: capitalize;
+		margin: 32px 0;
+	}
+	& h3 {
+		font-family: AvenirDemi;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $silver;
+		margin-bottom: 8px;
+	}
+	&-input {
+		height: 48px;
+		width: 100%;
+		padding: 0 16px;
+		border: 1px solid $mercury;
+		border-radius: 5px;
+		margin-bottom: 24px;
+		background-color: $alabaster;
+		&::placeholder {
+			color: black;
+		}
+	}
+	&-instock {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 24px;
+		align-items: center;
+	}
+	& h4 {
+		text-transform: capitalize;
+	}
+	&-inputBox {
+		height: 80px;
 
-    width: 100%;
-    padding: 0 16px;
-    border: 1px solid $mercury;
-    border-radius: 5px;
-    margin-bottom: 24px;
-  }
-  &-select {
-    width: 100%;
-    // height: 48px;
-    margin-bottom: 24px;
-    border-radius: 5px;
-    border: 1px solid $mercury;
+		width: 100%;
+		padding: 0 16px;
+		border: 1px solid $mercury;
+		border-radius: 5px;
+		margin-bottom: 24px;
+	}
+	&-select {
+		width: 100%;
+		// height: 48px;
+		margin-bottom: 24px;
+		border-radius: 5px;
+		border: 1px solid $mercury;
 
-    &:focus {
-      outline: none;
-    }
-  }
-  &-save {
-    width: 100%;
-    height: 48px;
-    background-color: $instock-blue;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 5px;
-    font-size: 13px;
-    font-family: AvenirDemi;
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &-cancel {
-    width: 100%;
-    height: 48px;
-    color: $instock-blue-dark;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-family: AvenirDemi;
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
+		&:focus {
+			outline: none;
+		}
+	}
+	&-save {
+		width: 100%;
+		height: 48px;
+		background-color: $instock-blue;
+		color: white;
+		text-transform: uppercase;
+		border-radius: 5px;
+		font-size: 13px;
+		font-family: AvenirDemi;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&-cancel {
+		width: 100%;
+		height: 48px;
+		color: $instock-blue-dark;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-family: AvenirDemi;
+		border-radius: 5px;
+		margin-top: 5px;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .newBigPage {
-  position: absolute;
-  display: flex;
-  z-index: 10;
-  width: 95%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  justify-content: center;
-  align-items: center;
-  &-tablet {
-    padding: 0 5%;
-    opacity: 1;
-    background-color: white;
+	position: absolute;
+	display: flex;
+	z-index: 10;
+	width: 95%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	&-tablet {
+		padding: 0 5%;
+		opacity: 1;
+		background-color: white;
 
-    border-radius: 5px;
-    padding: 0 3.125%;
-    width: 576px;
-    height: 640px;
-  }
+		border-radius: 5px;
+		padding: 0 3.125%;
+		width: 576px;
+		height: 640px;
+	}
 
-  &-div {
-    display: flex;
-    justify-content: space-around;
-  }
+	&-div {
+		display: flex;
+		justify-content: space-around;
+	}
 }
 
 @include medium {
-  .newPage {
-    // width: 70%;
-    &-input {
-      width: 100%;
-    }
-  }
+	.newPage {
+		// width: 70%;
+		&-input {
+			width: 100%;
+		}
+	}
 }
 
 @include huge {
-  .newBigPage {
-    position: fixed;
-    z-index: 1;
-    margin-top: -1250px;
-    margin-left: 17.5vw;
-    width: 40vw;
-    height: 624px;
+	.newBigPage {
+		position: fixed;
+		z-index: 1;
+		margin-top: -1250px;
+		margin-left: 17.5vw;
+		width: 40vw;
+		height: 624px;
 
-    &-flex {
-      width: 40vw;
-      height: 100%;
-    }
-  }
+		&-flex {
+			width: 40vw;
+			height: 100%;
+		}
+	}
 }

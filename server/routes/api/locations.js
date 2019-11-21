@@ -17,4 +17,24 @@ router.get('/:warehouse', (req, res) => {
 	}
 });
 
+router.post('/', (req, res) => {
+	const newLocation = {
+		warehouse: req.body.warehouse,
+		street: req.body.street,
+		city: req.body.city,
+		country: req.body.country,
+		number: req.body.number,
+		email: req.body.email,
+		categories1: req.body.categories1,
+		position: req.body.position,
+		actualCity: req.body.city,
+		actualCountry: req.body.country,
+		shortStreet: req.body.street,
+		categories2: ''
+	};
+	locations.push(newLocation);
+	helper.writeJSONFile(locationFile, locations);
+	res.json(locations);
+});
+
 module.exports = router;

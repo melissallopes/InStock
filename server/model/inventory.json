@@ -1,42 +1,50 @@
 [
-  {
-    "item": "Product one",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "In Stock"
-  },
-  {
-    "item": "Product two",
-    "ordered": "2019-11-21",
-    "location": "Toronto, CA",
-    "quantity": "15,000",
-    "status": "In-Stock",
-    "description": "Here is a very brief description of the product in the inventory..."
-  },
-  {
-    "item": "Product three",
-    "ordered": "2000-22-22",
-    "location": "Toronto, CA",
-    "quantity": "20,000",
-    "status": "Out of Stock",
-    "description": "Here is a very brief description of the product in the inventory..."
-  },
-  {
-    "item": "Product four",
-    "ordered": "2019-11-21",
-    "location": "Toronto, CA",
-    "quantity": "15,000",
-    "status": "Out of Stock",
-    "description": "Here is a very brief description of the product in the inventory..."
-  },
-  {
-    "item": "Product five",
-    "ordered": "2019-11-21",
-    "location": "Toronto, CA",
-    "quantity": "12,000",
-    "status": "In-Stock",
-    "description": "Here is a very brief description of the product in the inventory..."
-  }
+	{
+		"item": "Product Name Here",
+		"description": "Here is a very brief description of the product in the inventory...",
+		"ordered": "05/24/2018",
+		"location": "Toronto, CAN",
+		"quantity": "12,000",
+		"status": "In Stock"
+	},
+	{
+		"item": "rylan's brain",
+		"ordered": "2019-11-21",
+		"location": "TorontoCA",
+		"quantity": "1",
+		"status": "In-Stock",
+		"description": ""
+	},
+	{
+		"item": "jifej",
+		"ordered": "2000-22-22",
+		"location": "TorontoCA",
+		"quantity": "1",
+		"status": "Out of Stock",
+		"description": ""
+	},
+	{
+		"item": "anita's brain",
+		"ordered": "2019-11-21",
+		"location": "Toronto  CA",
+		"quantity": "1",
+		"status": "",
+		"description": "something"
+	},
+	{
+		"item": "anita's brain2",
+		"ordered": "2019-11-21",
+		"location": "Toronto  CA",
+		"quantity": "1",
+		"status": "",
+		"description": "none"
+	},
+	{
+		"item": "warehouse",
+		"ordered": "2000-11-11",
+		"location": "Toronto  CA",
+		"quantity": "1",
+		"status": "In-Stock",
+		"description": "i want it"
+	}
 ]
