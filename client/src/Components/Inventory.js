@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import kebabIcon from '../assets/Icons/SVG/Icon-kebab-default.svg';
+import { Link } from 'react-router-dom';
+import Plus from '../assets/Icons/SVG/Icon-add.svg';
 
 class Inventory extends React.Component {
 	state = {
@@ -9,15 +11,18 @@ class Inventory extends React.Component {
 
 	render() {
 		const inventory = this.state.inventory;
-
+		console.log(inventory);
 		if (this.state.inventory) {
-			const InventoryList = inventory.map((product, index) => {
+			const InventoryList = inventory.map((product) => {
 				return (
-					<div key={index} className="inventory__div">
+					<div className="inventory__div">
 						<div className="inventory__item">
+							<img className="inventory__icon-mobile" src={kebabIcon} onClick={this.handleClick} />
 							<h2 className="inventory__label">ITEM</h2>
-							<p className="inventory__itens-bold">{product.item}</p>
-							<p className="inventory__itens-description">{product.description}</p>
+							<Link to={`/inventory/${product.item}`}>
+								<p className="inventory__itens-bold">{product.item}</p>
+								<p className="inventory__itens-description">{product.description}</p>
+							</Link>
 						</div>
 						<div className="inventory__order">
 							<h2 className="inventory__label">LAST ORDERED</h2>
@@ -35,7 +40,7 @@ class Inventory extends React.Component {
 							<h2 className="inventory__label">STATUS</h2>
 							<p className="inventory__itens">{product.status}</p>
 						</div>
-						<img className="inventory__icon" src={kebabIcon} alt="dropdown" />
+						<img className="inventory__icon" src={kebabIcon} onClick={this.handleClick} />
 					</div>
 				);
 			});
@@ -54,6 +59,11 @@ class Inventory extends React.Component {
 						<h2 className="inventory__desk-status">Status</h2>
 					</div>
 					<div>{InventoryList}</div>
+					<Link to="/inventorys/createnew">
+						<button type="button" className="locations-button" onClick={this.toggleDisplay}>
+							<img src={Plus} alt="upload" className="locations-button-img" />
+						</button>
+					</Link>
 				</div>
 			);
 		} else return <div>Loading...</div>;
@@ -65,6 +75,10 @@ class Inventory extends React.Component {
 			});
 		});
 	}
+
+	handleClick = (event) => {
+		return <button className="inventory__button">Remove</button>;
+	};
 }
 
 export default Inventory;
