@@ -42,7 +42,6 @@ export default class InventoryDetail extends React.Component {
             </div>
             <h3 className="indet__indicator">In Stock</h3>
           </div>
-
           <div className="indet__flex">
             <div className="indet__description">
               <div className="indet__info-box">
