@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   res.json(inventory);
 });
 
-router.get("/:inventorydetail", (req, res) => {
+router.get("/:item", (req, res) => {
   const found = inventory.some(inventory => inventory.item === req.params.item);
   if (found) {
     res.json(inventory.filter(inventory => inventory.item === req.params.item));

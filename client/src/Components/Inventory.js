@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import kebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
+import { Link } from "react-router-dom";
 
 class Inventory extends React.Component {
   state = {
@@ -9,7 +10,7 @@ class Inventory extends React.Component {
 
   render() {
     const inventory = this.state.inventory;
-
+    console.log(inventory);
     if (this.state.inventory) {
       const InventoryList = inventory.map(product => {
         return (
@@ -21,11 +22,12 @@ class Inventory extends React.Component {
                 onClick={this.handleClick}
               ></img>
               <h2 className="inventory__label">ITEM</h2>
-
-              <p className="inventory__itens-bold">{product.item}</p>
-              <p className="inventory__itens-description">
-                {product.description}
-              </p>
+              <Link to={`/inventory/${product.item}`}>
+                <p className="inventory__itens-bold">{product.item}</p>
+                <p className="inventory__itens-description">
+                  {product.description}
+                </p>
+              </Link>
             </div>
             <div className="inventory__order">
               <h2 className="inventory__label">LAST ORDERED</h2>
