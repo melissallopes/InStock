@@ -54,6 +54,12 @@
 			width: 20px;
 			height: 20px;
 		}
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -144,8 +150,8 @@
 			}
 		}
 		&-button {
-			width: 100px;
-			height: 100px;
+			width: 80px;
+			height: 80px;
 			right: 15%;
 			bottom: 10%;
 			&-img {
