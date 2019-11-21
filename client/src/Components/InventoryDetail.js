@@ -6,33 +6,27 @@ import axios from "axios";
 export default class InventoryDetail extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
-      item: undefined
+      item: {}
     };
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.item);
     axios
       .get(`http://localhost:5000/inventory/${this.props.match.params.item}`)
       .then(res => {
-        // console.log(res.data[this.props.match.params.splice(1, 1, " ")]);
-        // this.setState({
-        // item: res.data[0]
-        // });
-        // console.log(this.state.item);
-        console.log(res.data);
+        this.setState({
+          item: res.data[0]
+        });
+        console.log(this.state.item);
       });
   }
 
   render() {
-    console.log(this.state);
-    // if (this.state.item) {
-    return <div>fefe</div>;
-    {
-      /* <div className="indet__div">
+    if (this.state.item) {
+      return (
+        <div className="indet__div">
           <div className="indet__heading">
             <div className="indet__heading-sub">
               <Link to={`/inventory`}>
@@ -44,74 +38,17 @@ export default class InventoryDetail extends React.Component {
                   />
                 </button>
               </Link>
-              <h1 className="indet__name">{this.state.item}</h1>
+              <h1 className="indet__name">{this.state.item.item}</h1>
             </div>
             <h3 className="indet__indicator">In Stock</h3>
           </div>
-
-<<<<<<< HEAD
-                <div className="indet__flex">
-                    <div className="indet__description">
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Item Description</h4>
-                            <p className="indet__info-body">
-                                Here is a more detailed summary of the product name, it’s uses, industries and
-                                possible attributes that could be used to describe the product.
-                            </p>
-                        </div>
-                    </div>
-                
-                <div className="indet__details">
-                    <div className="indet__details-small">
-                        <div className="indet__small-box">
-                            <h4 className="indet__small-head">Ordered By</h4>
-                            <p className="indet__small-body">
-                                Mark Saunders
-                            </p>
-                        </div>
-
-                        <div className="indet__small-box">
-                            <h4 className="indet__small-head">Reference Number</h4>
-                            <p className="indet__small-body">
-                                JK2020FD7811201
-                            </p>
-                        </div>
-
-                        <div className="indet__small-box">
-                            <h4 className="indet__small-head">Last Ordered</h4>
-                            <p className="indet__small-body">
-                                2018-05-24
-                            </p>
-                        </div>
-
-                        <div className="indet__small-box">
-                            <h4 className="indet__small-head">Location</h4>
-                            <p className="indet__small-body">
-                                Toronto, CAN
-                            </p>
-                        </div>
-
-                        <div className="indet__small-box">
-                            <h4 className="indet__small-head">Quantity</h4>
-                            <p className="indet__small-body">
-                                12000
-                            </p>
-                        </div>
-                    </div>
-                    <div className="indet__tags">
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Categories</h4>
-                            <p className="indet__info-body">
-                                Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales
-                            </p>
-                        </div>
-                    </div>
-=======
           <div className="indet__flex">
             <div className="indet__description">
               <div className="indet__info-box">
                 <h4 className="indet__info-head">Item Description</h4>
-                <p className="indet__info-body">{this.state.description}</p>
+                <p className="indet__info-body">
+                  {this.state.item.description}
+                </p>
               </div>
             </div>
 
@@ -129,18 +66,17 @@ export default class InventoryDetail extends React.Component {
 
                 <div className="indet__info-box">
                   <h4 className="indet__info-head">Last Ordered</h4>
-                  <p className="indet__info-body">2018-05-24</p>
+                  <p className="indet__info-body">{this.state.item.ordered}</p>
                 </div>
 
                 <div className="indet__info-box">
                   <h4 className="indet__info-head">Location</h4>
-                  <p className="indet__info-body">Toronto, CAN</p>
->>>>>>> master
+                  <p className="indet__info-body">{this.state.item.location}</p>
                 </div>
 
                 <div className="indet__info-box">
                   <h4 className="indet__info-head">Quantity</h4>
-                  <p className="indet__info-body">12000</p>
+                  <p className="indet__info-body">{this.state.item.quantity}</p>
                 </div>
               </div>
               <div className="indet__tags">
@@ -159,9 +95,8 @@ export default class InventoryDetail extends React.Component {
               Edit
             </button>
           </div>
-        </div> */
+        </div>
+      );
     }
-    // );
-    // }
   }
 }
