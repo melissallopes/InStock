@@ -487,6 +487,11 @@
   cursor: pointer;
 }
 
+.locations-btn {
+  background-color: transparent;
+  border: none;
+}
+
 @media only screen and (min-width: 768px) {
   .h5info {
     margin: 5px 0;
@@ -916,6 +921,8 @@
   text-transform: uppercase;
   font-size: 13px;
   font-family: AvenirDemi;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .newPage-cancel:focus {
@@ -1072,11 +1079,113 @@
   font-size: 1rem;
 }
 
+.uploadBig {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  left: 0vw;
+}
+
+.uploadBig-inner {
+  background-color: white;
+  width: 75vw;
+  opacity: 1;
+  padding: 2% 5%;
+}
+
+.uploadBig h2 {
+  font-family: AvinirBold;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.uploadBig-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.uploadBig input {
+  height: 35px;
+  width: 220px;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  padding-left: 10px;
+}
+
+.uploadBig input::-webkit-input-placeholder {
+  color: black;
+}
+
+.uploadBig input:-ms-input-placeholder {
+  color: black;
+}
+
+.uploadBig input::-ms-input-placeholder {
+  color: black;
+}
+
+.uploadBig input::placeholder {
+  color: black;
+}
+
+.uploadBig h3 {
+  margin-bottom: 3px;
+  color: #afafaf;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.uploadBig-smallDiv {
+  width: 40%;
+}
+
+.uploadBig-desc {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .uploadBig-inner {
+    width: 45vw;
+    padding: 3% 5%;
+  }
+  .uploadBig h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .uploadBig h3 {
+    font-size: 20px;
+  }
+  .uploadBig input {
+    height: 45px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: AvenirRegular;
+}
+
+button:focus {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

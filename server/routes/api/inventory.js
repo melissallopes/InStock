@@ -33,4 +33,16 @@ router.post('/', (req, res) => {
 	res.json(inventory);
 });
 
+router.delete('/', (req, res) => {
+	const found = inventory.some((inventor) => inventor.name === req.params.name);
+	if (found) {
+		const itemAfterDeletion = inventory.filter((inventor) => inventor.name === req.param.name);
+		helper.writeJSONFile(inventoryFile, itemAfterDeletion);
+		res.json({
+			msg: `Item with name: ${req.params.name} Deleted`,
+			inventory: itemAfterDeletion
+		});
+	}
+});
+
 module.exports = router;

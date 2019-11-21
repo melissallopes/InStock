@@ -38,5 +38,13 @@
 		"quantity": "1",
 		"status": "",
 		"description": "none"
+	},
+	{
+		"item": "warehouse",
+		"ordered": "2000-11-11",
+		"location": "Toronto  CA",
+		"quantity": "1",
+		"status": "In-Stock",
+		"description": "i want it"
 	}
 ]

@@ -5,9 +5,6 @@ import LocationsMapBig from './LocationsMapDesktop';
 import { Link } from 'react-router-dom';
 
 import Plus from '../assets/Icons/SVG/Icon-add.svg';
-import NewLocation from './NewLocation';
-
-const { getCodes, getNames } = require('country-list');
 
 export default class Locations extends Component {
 	constructor(props) {
@@ -15,9 +12,12 @@ export default class Locations extends Component {
 		this.state = {
 			locations: [],
 			isDesktop: false,
-			isToggle: false,
 			isTablet: false,
-			display: 'none'
+			display: 'none',
+			value: 'select',
+			checked: false,
+			optionName: [],
+			selectedOption: null
 		};
 		this.updatePredicate = this.updatePredicate.bind(this);
 	}
@@ -45,148 +45,125 @@ export default class Locations extends Component {
 	}
 
 	toggleDisplay = () => {
-		// if (this.state.isToggle === false) {
-		// 	this.setState({
-		// 		isToggle: true
-		// 	});
-		// 	console.log(this.state.isToggle);
-		// } else {
-		// 	this.setState({
-		// 		isToggle: false
-		// 	});
-		// 	console.log(this.state.isToggle);
-		// }
 		if (this.state.display === 'none') {
 			this.setState({
 				display: 'flex'
 			});
-			console.log(this.state.display);
 		} else {
 			this.setState({
 				display: 'none'
 			});
-			console.log(this.state.display);
 		}
+	};
+
+	onSubmit = () => {
+		axios.post('http://localhost:5000/locations', {
+			warehouse: this.warehouseName.value,
+			street: `${this.street.value}, ${this.city.value}, ${this.country.value} `,
+			city: this.city.value,
+			country: this.country.value,
+			number: this.number.value,
+			email: this.email.value,
+			categories1: this.category.value,
+			position: this.position.value,
+			actualCity: this.city.value,
+			actualCountry: this.country.value,
+			shortStreet: this.street.value
+		});
 	};
 
 	render() {
 		const isDesktop = this.state.isDesktop;
 		const isTablet = this.state.isTablet;
-		const allCountry = getNames().map((data, index) => {
-			return <option key={index}>{data}</option>;
-		});
-		if (this.state.isToggle === false) {
-			return (
-				<div>
-					{/* <Header /> */}
-					<div className="locations">
-						<div className="locations__header">
-							<h2 className="locations__header-title">locations</h2>
-							<input type="text" className="locations__header-input" placeholder="Search" />
-						</div>
-						<div>
-							{isDesktop ? (
-								<LocationsMapBig data={this.state} />
-							) : (
-								<LocationsMapSmall data={this.state} />
-							)}
-						</div>
 
-						{isTablet ? (
+		return (
+			<div>
+				<div className="locations">
+					<div className="locations__header">
+						<h2 className="locations__header-title">locations</h2>
+						<input type="text" className="locations__header-input" placeholder="Search" />
+					</div>
+					<div>
+						{isDesktop ? <LocationsMapBig data={this.state} /> : <LocationsMapSmall data={this.state} />}
+					</div>
+
+					{isTablet ? (
+						<button type="button" className="locations-button" onClick={this.toggleDisplay}>
+							<img src={Plus} alt="upload" className="locations-button-img" />
+						</button>
+					) : (
+						<Link to="/location/new">
 							<button type="button" className="locations-button" onClick={this.toggleDisplay}>
 								<img src={Plus} alt="upload" className="locations-button-img" />
 							</button>
-						) : (
-							<Link to="/location/new">
-								<button type="button" className="locations-button" onClick={this.toggleDisplay}>
-									<img src={Plus} alt="upload" className="locations-button-img" />
-								</button>
-							</Link>
-						)}
+						</Link>
+					)}
 
-						<div className="newBigPage" style={{ display: `${this.state.display}` }}>
-							<div className="newBigPage-tablet">
-								<h2>create new</h2>
-								<form>
-									<h3>product</h3>
-									<input type="text" placeholder="Item Name" className="newPage-input" />
-									<h3>last ordered</h3>
-									<input type="text" placeholder="yyyy-mm-dd" className="newPage-input" />
+					<div className="uploadBig" style={{ display: `${this.state.display}` }}>
+						<div className="uploadBig-inner">
+							<h2>create new</h2>
+							<div className="uploadBig-div">
+								<div className="uploadBig-smallDiv">
+									<h3>warehouse name</h3>
+									<input
+										type="text"
+										placeholder="Warehouse Name"
+										ref={(ref) => (this.warehouseName = ref)}
+									/>
+								</div>
+								<div className="uploadBig-smallDiv">
+									<h3>street</h3>
+									<input type="text" placeholder="Street" ref={(ref) => (this.street = ref)} />
+								</div>
+							</div>
+							<div className="uploadBig-div">
+								<div className="uploadBig-smallDiv">
 									<h3>city</h3>
-									<input type="text" placeholder="City" className="newPage-input" />
+									<input type="text" placeholder="City" ref={(ref) => (this.city = ref)} />
+								</div>
+								<div className="uploadBig-smallDiv">
 									<h3>country</h3>
-									<select>{allCountry}</select>
-									<h3>quantity</h3>
-									<input type="text" placeholder="0" className="newPage-input" />
-									<h3>status</h3>
-									<div className="newPage-instock">
-										<h4>in stock</h4>
-										<input className="apple-switch" type="checkbox" />
-									</div>
-									<h3>item description</h3>
-									<input type="text" placeholder="(optional)" className="newPage-inputBox" />
-									<div>
-										<button type="button" className="newPage-save">
-											save
-										</button>
-										<Link to="/">
-											<button type="button" className="newPage-cancel">
-												cancel
-											</button>
-										</Link>
-									</div>
-								</form>
+									<input type="text" placeholder="Country" ref={(ref) => (this.country = ref)} />
+								</div>
+							</div>
+							<div className="uploadBig-cate">
+								<h3>categories</h3>
+								<input type="text" placeholder="Category" ref={(ref) => (this.category = ref)} />
+							</div>
+							<h2>contact</h2>
+							<div className="uploadBig-div">
+								<div className="uploadBig-smallDiv">
+									<h3>name</h3>
+									<input type="text" placeholder="Name" ref={(ref) => (this.personName = ref)} />
+								</div>
+								<div className="uploadBig-smallDiv">
+									<h3>postition</h3>
+									<input type="text" placeholder="Posititon" ref={(ref) => (this.position = ref)} />
+								</div>
+							</div>
+							<div className="uploadBig-div">
+								<div className="uploadBig-smallDiv">
+									<h3>number</h3>
+									<input type="text" placeholder="Number" ref={(ref) => (this.number = ref)} />
+								</div>
+								<div className="uploadBig-smallDiv">
+									<h3>email</h3>
+									<input type="text" placeholder="Email" ref={(ref) => (this.email = ref)} />
+								</div>
+							</div>
+							<div>
+								<button type="button" className="newPage-save" onClick={this.onSubmit}>
+									save
+								</button>
+
+								<button type="button" className="newPage-cancel" onClick={this.toggleDisplay}>
+									cancel
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-			);
-		} else {
-			return (
-				<div>
-					{/* <Header /> */}
-					<div className="locations">
-						<div className="locations__header">
-							<h2 className="locations__header-title">locations</h2>
-							<input type="text" className="locations__header-input" placeholder="Search" />
-						</div>
-						<div>
-							{isDesktop ? (
-								<LocationsMapBig data={this.state} />
-							) : (
-								<LocationsMapSmall data={this.state} />
-							)}
-						</div>
-
-						{isTablet ? (
-							<button type="button" className="locations-button" onClick={this.toggleDisplay}>
-								<img src={Plus} alt="upload" className="locations-button-img" />
-							</button>
-						) : (
-							<Link to="/location/new">
-								<button type="button" className="locations-button" onClick={this.toggleDisplay}>
-									<img src={Plus} alt="upload" className="locations-button-img" />
-								</button>
-							</Link>
-						)}
-						<NewLocation style={{ display: `${this.state.display}` }} />
-					</div>
-				</div>
-			);
-		}
-
-		// return (
-		// 	<div className="locations">
-		// 		<div className="locations__header">
-		// 			<h2 className="locations__header-title">locations</h2>
-		// 			<input type="text" className="locations__header-input" placeholder="Search" />
-		// 		</div>
-		// 		<div>{isDesktop ? <LocationsMapBig data={this.state} /> : <LocationsMapSmall data={this.state} />}</div>
-
-		// 		<button type="button" className="locations-button" onClick={this.toggleDisplay}>
-		// 			<img src={Plus} alt="upload" className="locations-button-img" />
-		// 		</button>
-		// 	</div>
-		// );
+			</div>
+		);
 	}
 }

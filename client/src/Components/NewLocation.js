@@ -12,7 +12,7 @@ export default class NewLocation extends Component {
 		selectedOption: null,
 		city: 'City',
 		country: 'Country',
-		status: ''
+		status: 'Out of Stock'
 	};
 
 	componentDidMount() {
@@ -129,7 +129,7 @@ export default class NewLocation extends Component {
 						<button type="button" className="newPage-save" onClick={this.onSubmit}>
 							save
 						</button>
-						<Link to="/">
+						<Link to="/locations">
 							<button type="button" className="newPage-cancel">
 								cancel
 							</button>

@@ -3,15 +3,116 @@ import axios from 'axios';
 import kebabIcon from '../assets/Icons/SVG/Icon-kebab-default.svg';
 import { Link } from 'react-router-dom';
 import Plus from '../assets/Icons/SVG/Icon-add.svg';
+import Switch from 'react-switch';
+import Select from 'react-select';
 
 class Inventory extends React.Component {
-	state = {
-		inventory: undefined
+	constructor(props) {
+		super(props);
+		this.state = {
+			inventory: undefined,
+			isTablet: false,
+			display: 'none',
+			value: 'select',
+			checked: false,
+			optionName: [],
+			selectedOption: null,
+			city: 'City',
+			country: 'Country',
+			status: 'Out for Stock'
+		};
+		this.updatePredicate = this.updatePredicate.bind(this);
+	}
+
+	componentDidMount() {
+		this.updatePredicate();
+		window.addEventListener('resize', this.updatePredicate);
+		axios.get('http://localhost:5000/inventory').then((response) => {
+			this.setState({
+				inventory: response.data
+			});
+		});
+		axios.get('http://localhost:5000/locations').then((res) => {
+			console.log(res.data);
+			res.data.map((data, index) => {
+				this.state.optionName.push({
+					value: data.warehouse,
+					label: data.warehouse,
+					city: data.actualCity,
+					country: data.actualCountry
+				});
+
+				return null;
+			});
+			console.log(this.state.optionName);
+		});
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updatePredicate);
+	}
+
+	updatePredicate() {
+		this.setState({
+			isDesktop: window.innerWidth > 1439,
+			isTablet: window.innerWidth > 767
+		});
+	}
+
+	toggleDisplay = () => {
+		if (this.state.display === 'none') {
+			this.setState({
+				display: 'flex'
+			});
+		} else {
+			this.setState({
+				display: 'none'
+			});
+		}
+	};
+
+	handleClick = (event) => {
+		return <button className="inventory__button">Remove</button>;
+	};
+
+	handleChange = () => {
+		if (this.state.checked === false) {
+			this.setState({
+				checked: true,
+				status: 'In-Stock'
+			});
+		} else {
+			this.setState({
+				checked: false,
+				status: 'Out of Stock'
+			});
+		}
+	};
+
+	dropDownChange = (selectedOption) => {
+		this.setState({ selectedOption, city: selectedOption.city, country: selectedOption.country });
+		console.log(`Option selected:`, selectedOption);
+		console.log(this.state.selectedOption);
+	};
+
+	onSubmit = () => {
+		if (this.desc.value === '') {
+			this.desc.value = 'none';
+		}
+		axios.post('http://localhost:5000/inventory', {
+			item: this.item.value,
+			ordered: this.date.value,
+			location: `${this.state.city}  ${this.state.country}`,
+			quantity: this.quantity.value,
+			status: this.state.status,
+			description: this.desc.value
+		});
 	};
 
 	render() {
+		const { selectedOption } = this.state;
+		const isTablet = this.state.isTablet;
 		const inventory = this.state.inventory;
-		console.log(inventory);
 		if (this.state.inventory) {
 			const InventoryList = inventory.map((product) => {
 				return (
@@ -59,26 +160,93 @@ class Inventory extends React.Component {
 						<h2 className="inventory__desk-status">Status</h2>
 					</div>
 					<div>{InventoryList}</div>
-					<Link to="/inventorys/createnew">
+					{isTablet ? (
 						<button type="button" className="locations-button" onClick={this.toggleDisplay}>
 							<img src={Plus} alt="upload" className="locations-button-img" />
 						</button>
-					</Link>
+					) : (
+						<Link to="/inventorys/createnew">
+							<button type="button" className="locations-button" onClick={this.toggleDisplay}>
+								<img src={Plus} alt="upload" className="locations-button-img" />
+							</button>
+						</Link>
+					)}
+					<div className="uploadBig" style={{ display: `${this.state.display}` }}>
+						<div className="uploadBig-inner">
+							<h2>create new</h2>
+							<div className="uploadBig-div">
+								<div>
+									<h3>product</h3>
+									<input type="text" placeholder="Warehouse Name" ref={(ref) => (this.item = ref)} />
+								</div>
+								<div>
+									<h3>last ordered</h3>
+									<input type="text" placeholder="yyyy-mm-dd" ref={(ref) => (this.date = ref)} />
+								</div>
+							</div>
+							<div className="uploadBig-div">
+								<div>
+									<h3>city</h3>
+									<input type="text" placeholder={this.state.city} ref={(ref) => (this.city = ref)} />
+								</div>
+								<div>
+									<h3>country</h3>
+									<input
+										type="text"
+										placeholder={this.state.country}
+										ref={(ref) => (this.country = ref)}
+									/>
+								</div>
+							</div>
+							<div className="uploadBig-cate">
+								<h3>warehouse</h3>
+								<Select
+									value={selectedOption}
+									onChange={this.dropDownChange}
+									options={this.state.optionName}
+									className="uploadBig-selector"
+								>
+									{this.state.optionName}
+								</Select>
+							</div>
+
+							<div className="uploadBig-div">
+								<div>
+									<h3>quantity</h3>
+									<input type="text" placeholder="Quantity" ref={(ref) => (this.quantity = ref)} />
+								</div>
+								<div>
+									<h3>status</h3>
+									<div className="newPage-instock">
+										<h4>in stock</h4>
+										<Switch onChange={this.handleChange} checked={this.state.checked} />
+									</div>
+								</div>
+							</div>
+							<div className="uploadBig-div">
+								<h3>item description</h3>
+								<input
+									type="text"
+									placeholder="(optional)"
+									className="bigUpload-desc"
+									ref={(ref) => (this.desc = ref)}
+								/>
+							</div>
+							<div>
+								<button type="button" className="newPage-save" onClick={this.onSubmit}>
+									save
+								</button>
+
+								<button type="button" className="newPage-cancel" onClick={this.toggleDisplay}>
+									cancel
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			);
 		} else return <div>Loading...</div>;
 	}
-	componentDidMount() {
-		axios.get('http://localhost:5000/inventory').then((response) => {
-			this.setState({
-				inventory: response.data
-			});
-		});
-	}
-
-	handleClick = (event) => {
-		return <button className="inventory__button">Remove</button>;
-	};
 }
 
 export default Inventory;

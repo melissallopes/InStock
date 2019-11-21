@@ -12,7 +12,7 @@ export default class NewLocation extends Component {
 		selectedOption: null,
 		city: 'City',
 		country: 'Country',
-		status: ''
+		status: 'Out for Stock'
 	};
 
 	componentDidMount() {
