@@ -198,6 +198,11 @@
   margin-left: 0;
 }
 
+.inventory__link {
+  text-decoration: none;
+  color: #323232;
+}
+
 .inventory__itens-bold {
   font-family: "AvenirDemi";
   font-size: 15px;
@@ -215,6 +220,24 @@
 
 .inventory__icon-mobile:active {
   color: #323232;
+}
+
+.inventory__remove-button-mobile {
+  width: 30vw;
+  height: 12vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.4vw solid #e1e1e1;
+  border-radius: 1.2vw;
+  color: #323232;
+  background-color: #fff;
+  position: absolute;
+  left: 65vw;
+  top: 87vw;
+}
+
+.inventory__remove-button-desk {
+  display: none;
 }
 
 .inventory__button {
@@ -311,6 +334,22 @@
   }
   .inventory__icon-mobile {
     display: none;
+  }
+  .inventory__remove-button-mobile {
+    display: none;
+  }
+  .inventory__remove-button-desk {
+    display: inline-block;
+    width: 12vw;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 0.1vw solid #e1e1e1;
+    right: 14vw;
+    top: 18vw;
+    background-color: white;
+    padding: 1.1vw 3.2vw;
+    text-align: center;
   }
 }
 
@@ -808,48 +847,6 @@
   }
 }
 
-input.apple-switch {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
-  width: 50px;
-  height: 30px;
-  background-color: #ffffff;
-  border: 1px solid #d9dadc;
-  border-radius: 50px;
-  -webkit-box-shadow: inset -20px 0 0 0 #ffffff;
-          box-shadow: inset -20px 0 0 0 #ffffff;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-}
-
-input.apple-switch:after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 26px;
-  height: 26px;
-  background-color: transparent;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-input.apple-switch:checked {
-  border-color: #4ed164;
-  -webkit-box-shadow: inset 20px 0 0 0 #4ed164;
-          box-shadow: inset 20px 0 0 0 #4ed164;
-}
-
-input.apple-switch:checked:after {
-  left: 20px;
-  -webkit-box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
-          box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
-}
-
 .newPage {
   padding: 0 5%;
 }
@@ -921,21 +918,14 @@ input.apple-switch:checked:after {
   margin-bottom: 24px;
 }
 
-.newPage select {
+.newPage-select {
   width: 100%;
-  height: 48px;
-  background-color: #fafafa;
   margin-bottom: 24px;
   border-radius: 5px;
   border: 1px solid #e1e1e1;
-  padding: 0 16px;
-  background-image: url("../assets/Icons/SVG/Icon-arrow-updown.png");
-  background-repeat: no-repeat;
-  background-size: 10px 15px;
-  background-position: 95% 50%;
 }
 
-.newPage select:focus {
+.newPage-select:focus {
   outline: none;
 }
 
@@ -977,15 +967,31 @@ input.apple-switch:checked:after {
 
 .newBigPage {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   z-index: 10;
-  left: 100px;
-  top: 0px;
-  -webkit-box-shadow: 0 0 999px 300px grey;
-          box-shadow: 0 0 999px 300px grey;
+  width: 95%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newBigPage-tablet {
+  padding: 0 5%;
+  opacity: 1;
   background-color: white;
-  border: 1px solid black;
   border-radius: 5px;
-  width: 70%;
+  padding: 0 3.125%;
+  width: 576px;
+  height: 640px;
 }
 
 .newBigPage-div {

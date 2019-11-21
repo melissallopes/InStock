@@ -5,7 +5,8 @@ import Locations from "./Components/Locations";
 import LocationDetail from "./Components/LocationsDetail";
 import { withRouter, Switch, Redirect, Route } from "react-router-dom";
 import NewLocation from "./Components/NewLocation";
-
+import InventoryDetail from "./Components/InventoryDetail";
+import NewItem from "./Components/NewItem";
 const App = ({ location }) => (
   <div>
     {location.pathname !== "/location/new" && <Header />}
@@ -30,7 +31,10 @@ const App = ({ location }) => (
           </div>
         )}
       />
+      <Route path="/inventorys/createnew" component={NewItem} />
+      <Route path="/location/new" component={NewLocation} />
     </Switch>
   </div>
 );
+
 export default withRouter(App);

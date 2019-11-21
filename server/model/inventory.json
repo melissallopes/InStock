@@ -1,6 +1,6 @@
 [
   {
-    "item": "Product Name Here",
+    "item": "Product one",
     "description": "Here is a very brief description of the product in the inventory...",
     "ordered": "05/24/2018",
     "location": "Toronto, CAN",
@@ -8,67 +8,35 @@
     "status": "In Stock"
   },
   {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "Out of Stock"
+    "item": "Product two",
+    "ordered": "2019-11-21",
+    "location": "Toronto, CA",
+    "quantity": "15,000",
+    "status": "In-Stock",
+    "description": "Here is a very brief description of the product in the inventory..."
   },
   {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "In Stock"
+    "item": "Product three",
+    "ordered": "2000-22-22",
+    "location": "Toronto, CA",
+    "quantity": "20,000",
+    "status": "Out of Stock",
+    "description": "Here is a very brief description of the product in the inventory..."
   },
   {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "Out of Stock"
+    "item": "Product four",
+    "ordered": "2019-11-21",
+    "location": "Toronto, CA",
+    "quantity": "15,000",
+    "status": "Out of Stock",
+    "description": "Here is a very brief description of the product in the inventory..."
   },
   {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "item": "Product five",
+    "ordered": "2019-11-21",
+    "location": "Toronto, CA",
     "quantity": "12,000",
-    "status": "In Stock"
-  },
-  {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "Out of Stock"
-  },
-  {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "In Stock"
-  },
-  {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "Out of Stock"
-  },
-  {
-    "item": "Product Name Here",
-    "description": "Here is a very brief description of the product in the inventory...",
-    "ordered": "05/24/2018",
-    "location": "Toronto, CAN",
-    "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "In-Stock",
+    "description": "Here is a very brief description of the product in the inventory..."
   }
 ]
