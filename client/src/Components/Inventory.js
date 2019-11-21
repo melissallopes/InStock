@@ -35,7 +35,7 @@ class Inventory extends React.Component {
 							<h2 className="inventory__label">STATUS</h2>
 							<p className="inventory__itens">{product.status}</p>
 						</div>
-						<img className="inventory__icon" src={kebabIcon} />
+						<img className="inventory__icon" src={kebabIcon} alt="dropdown" />
 					</div>
 				);
 			});
