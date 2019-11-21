@@ -103,8 +103,8 @@ export default class Locations extends Component {
 								</button>
 							</Link>
 						)}
-
 						<div className="newBigPage" style={{ display: `${this.state.display}` }}>
+						<div className="newBigPage-flex">
 							<h2>create new</h2>
 							<form>
 								<h3>product</h3>
@@ -136,6 +136,7 @@ export default class Locations extends Component {
 								</div>
 							</form>
 						</div>
+					</div>
 					</div>
 				</div>
 			);

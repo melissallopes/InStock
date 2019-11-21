@@ -61,6 +61,29 @@
 
     }
 
+    &__small {
+
+        &-box {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        &-head {
+            text-transform: uppercase;
+            font-family: AvenirDemi;
+            color: $silver;
+            margin-bottom: 16px;
+        }
+
+        &-body {
+            color: $black
+        }
+
+    }
+
+
     &__description {
         margin-bottom: 32px;
     }
@@ -78,5 +101,106 @@
         border-radius: 5px;
         font-size: 1rem;
 
+    }
+}
+
+@include medium {
+    .indet {
+        &__div {
+            width: 93.75vw;
+            margin: 32px 3.125vw;
+        }
+
+        &__heading {
+            flex-flow: row;
+            align-items: center;
+        }
+
+        &__indicator {
+            margin-bottom: 16px;
+            margin-left: 24px
+        }
+
+        &__details {
+
+            &-small {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: initial;
+                justify-content: initial;
+            
+            }
+        }
+
+        &__small {
+
+            &-box {
+                width: 50%;
+            }
+            
+        }
+
+        &__flex {
+            border-top: 2px solid $silver;
+            padding-top: 32px;
+            border-bottom: 2px solid $silver;
+
+        }
+
+        &__edit {
+            width: 160px;
+
+            &-wrapper {
+                padding-top: 32px;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+@include huge {
+    .indet {
+
+        &__heading{
+            margin-bottom: 14px;
+        }
+
+        &__div {
+            margin: 48px 12.5vw;
+            width: 75vw;
+
+        }
+
+        &__description {
+            width: 52%;
+        }
+
+
+        &__flex {
+            display: flex;
+            flex-flow: row;
+            padding-top: 40px;
+        }
+
+        &__small {
+
+            &-head {
+                margin-bottom: 24px;
+            }
+            &-body {
+                margin-bottom: 56px;
+            }
+        }
+
+        &__tags {
+            margin-bottom: 48px;
+        }
+
+        &__edit {
+            &-wrapper {
+                padding-top: 40px;
+            }
+        }
     }
 }

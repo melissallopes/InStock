@@ -30,37 +30,37 @@ export default class Inventory extends Component {
                 
                 <div className="indet__details">
                     <div className="indet__details-small">
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Ordered By</h4>
-                            <p className="indet__info-body">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Ordered By</h4>
+                            <p className="indet__small-body">
                                 Mark Saunders
                             </p>
                         </div>
 
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Reference Number</h4>
-                            <p className="indet__info-body">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Reference Number</h4>
+                            <p className="indet__small-body">
                                 JK2020FD7811201
                             </p>
                         </div>
 
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Last Ordered</h4>
-                            <p className="indet__info-body">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Last Ordered</h4>
+                            <p className="indet__small-body">
                                 2018-05-24
                             </p>
                         </div>
 
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Location</h4>
-                            <p className="indet__info-body">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Location</h4>
+                            <p className="indet__small-body">
                                 Toronto, CAN
                             </p>
                         </div>
 
-                        <div className="indet__info-box">
-                            <h4 className="indet__info-head">Quantity</h4>
-                            <p className="indet__info-body">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Quantity</h4>
+                            <p className="indet__small-body">
                                 12000
                             </p>
                         </div>
