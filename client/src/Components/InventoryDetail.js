@@ -49,6 +49,64 @@ export default class InventoryDetail extends React.Component {
             <h3 className="indet__indicator">In Stock</h3>
           </div>
 
+<<<<<<< HEAD
+                <div className="indet__flex">
+                    <div className="indet__description">
+                        <div className="indet__info-box">
+                            <h4 className="indet__info-head">Item Description</h4>
+                            <p className="indet__info-body">
+                                Here is a more detailed summary of the product name, it’s uses, industries and
+                                possible attributes that could be used to describe the product.
+                            </p>
+                        </div>
+                    </div>
+                
+                <div className="indet__details">
+                    <div className="indet__details-small">
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Ordered By</h4>
+                            <p className="indet__small-body">
+                                Mark Saunders
+                            </p>
+                        </div>
+
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Reference Number</h4>
+                            <p className="indet__small-body">
+                                JK2020FD7811201
+                            </p>
+                        </div>
+
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Last Ordered</h4>
+                            <p className="indet__small-body">
+                                2018-05-24
+                            </p>
+                        </div>
+
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Location</h4>
+                            <p className="indet__small-body">
+                                Toronto, CAN
+                            </p>
+                        </div>
+
+                        <div className="indet__small-box">
+                            <h4 className="indet__small-head">Quantity</h4>
+                            <p className="indet__small-body">
+                                12000
+                            </p>
+                        </div>
+                    </div>
+                    <div className="indet__tags">
+                        <div className="indet__info-box">
+                            <h4 className="indet__info-head">Categories</h4>
+                            <p className="indet__info-body">
+                                Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales
+                            </p>
+                        </div>
+                    </div>
+=======
           <div className="indet__flex">
             <div className="indet__description">
               <div className="indet__info-box">
@@ -77,6 +135,7 @@ export default class InventoryDetail extends React.Component {
                 <div className="indet__info-box">
                   <h4 className="indet__info-head">Location</h4>
                   <p className="indet__info-body">Toronto, CAN</p>
+>>>>>>> master
                 </div>
 
                 <div className="indet__info-box">
