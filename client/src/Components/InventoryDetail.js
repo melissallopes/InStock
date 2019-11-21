@@ -18,11 +18,6 @@ export default class InventoryDetail extends React.Component {
     axios
       .get(`http://localhost:5000/inventory/${this.props.match.params.item}`)
       .then(res => {
-        // console.log(res.data[this.props.match.params.splice(1, 1, " ")]);
-        // this.setState({
-        // item: res.data[0]
-        // });
-        // console.log(this.state.item);
         console.log(res.data);
       });
   }
