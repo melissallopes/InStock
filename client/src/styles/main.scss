@@ -5,20 +5,24 @@
 @import "./partials/header";
 @import "./partials/inventory";
 @import "./partials/locations";
-@import './partials/locationDetail';
-@import './partials/newLocation';
-@import './partials/inventorydetail';
-@import './partials/bigUpload';
+@import "./partials/locationDetail";
+@import "./partials/newLocation";
+@import "./partials/inventorydetail";
+@import "./partials/bigUpload";
 
 *,
 html,
 body {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: AvenirRegular;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: AvenirRegular;
 }
 
 button:focus {
-	outline: none;
+  outline: none;
+}
+
+.css-2b097c-container {
+  width: 100%;
 }
