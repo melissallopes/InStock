@@ -1,206 +1,275 @@
 .indet {
-    &__div{
-        margin: 16px 5vw;
+  &__div {
+    margin: 16px 5vw;
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    &-sub {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__backarrow {
+    margin-right: 16px;
+  }
+
+  &__name {
+    font-family: AvenirBold;
+    font-size: 1.8rem;
+  }
+
+  &__indicator {
+    background: #58a314;
+    width: 88px;
+    height: 24px;
+    font-family: AvenirDemi;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-radius: 5px;
+  }
+
+  &__info {
+    &-box {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
     }
 
-    &__heading{
-        margin-bottom: 16px;
-        display: flex;
-        flex-flow: column;
-        align-items: flex-start;
-
-        &-sub {
-            display: flex;
-            flex-flow: row;
-            align-items: flex-end;
-            margin-bottom: 16px;
-        }
+    &-head {
+      text-transform: uppercase;
+      font-family: AvenirDemi;
+      color: $silver;
+      margin-bottom: 5px;
     }
 
-    &__backarrow {
-        margin-right: 16px; 
+    &-body {
+      color: $black;
+    }
+  }
+
+  &__small {
+    &-box {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
     }
 
-    &__name {
-        font-family: AvenirBold;
-        font-size: 1.8rem;
+    &-head {
+      text-transform: uppercase;
+      font-family: AvenirDemi;
+      color: $silver;
+      margin-bottom: 16px;
     }
 
-    &__indicator {
-        background: #58A314;
-        width: 88px;
-        height: 24px;
-        font-family: AvenirDemi;
-        font-size: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $white;
-        border-radius: 5px;
+    &-body {
+      color: $black;
     }
+  }
 
-    &__info {
+  &__description {
+    margin-bottom: 32px;
+  }
 
-        &-box {
-            display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-            margin-bottom: 24px;
-        }
+  &__tags {
+    margin-bottom: 40px;
+  }
 
-        &-head {
-            text-transform: uppercase;
-            font-family: AvenirDemi;
-            color: $silver;
-            margin-bottom: 16px;
-        }
+  &__edit {
+    font-family: AvenirDemi;
+    background: $instock-blue;
+    color: $alabaster;
+    width: 90vw;
+    height: 48px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  &__edit-cancel {
+    font-family: AvenirDemi;
+    background: $white;
+    color: $instock-blue;
+    width: 90vw;
+    height: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+  }
 
-        &-body {
-            color: $black
-        }
-
-    }
-
-    &__small {
-
-        &-box {
-            display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-            margin-bottom: 24px;
-        }
-
-        &-head {
-            text-transform: uppercase;
-            font-family: AvenirDemi;
-            color: $silver;
-            margin-bottom: 16px;
-        }
-
-        &-body {
-            color: $black
-        }
-
-    }
-
-
-    &__description {
-        margin-bottom: 32px;
-    }
-
-    &__tags {
-        margin-bottom: 40px;
-    }
-
-    &__edit {
-        background: $instock-blue;
-        color: $alabaster;
-        width: 90vw;
-        height: 48px;
-        text-transform: uppercase;
-        border-radius: 5px;
-        font-size: 1rem;
-
-    }
+  &__input-edit-desc {
+    width: 80vw;
+    height: 40vw;
+    padding: 3vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+  }
+  &__input-edit-order-by {
+    //    margin-left: 5vw;
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
+  &__input-edit-ref {
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
+  &__input-edit-order {
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
+  &__input-edit-location {
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
+  &__input-edit-quant {
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
+  &__input-edit-categ {
+    width: 75vw;
+    height: 15vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    resize: none;
+    padding: 3vw;
+  }
 }
 
 @include medium {
-    .indet {
-        &__div {
-            width: 93.75vw;
-            margin: 32px 3.125vw;
-        }
-
-        &__heading {
-            flex-flow: row;
-            align-items: center;
-        }
-
-        &__indicator {
-            margin-bottom: 16px;
-            margin-left: 24px
-        }
-
-        &__details {
-
-            &-small {
-                display: flex;
-                flex-flow: row wrap;
-                align-items: initial;
-                justify-content: initial;
-            
-            }
-        }
-
-        &__small {
-
-            &-box {
-                width: 50%;
-            }
-            
-        }
-
-        &__flex {
-            border-top: 2px solid $silver;
-            padding-top: 32px;
-            border-bottom: 2px solid $silver;
-
-        }
-
-        &__edit {
-            width: 160px;
-
-            &-wrapper {
-                padding-top: 32px;
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
+  .indet {
+    &__div {
+      width: 93.75vw;
+      margin: 32px 3.125vw;
     }
+
+    &__heading {
+      flex-flow: row;
+      align-items: center;
+    }
+
+    &__indicator {
+      margin-bottom: 16px;
+      margin-left: 24px;
+    }
+
+    &__details {
+      &-small {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: initial;
+        justify-content: initial;
+      }
+    }
+
+    &__small {
+      &-box {
+        width: 50%;
+      }
+    }
+
+    &__flex {
+      border-top: 2px solid $silver;
+      padding-top: 32px;
+      border-bottom: 2px solid $silver;
+    }
+
+    &__edit {
+      width: 160px;
+
+      &-wrapper {
+        padding-top: 32px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
 }
 
 @include huge {
-    .indet {
-
-        &__heading{
-            margin-bottom: 14px;
-        }
-
-        &__div {
-            margin: 48px 12.5vw;
-            width: 75vw;
-
-        }
-
-        &__description {
-            width: 52%;
-        }
-
-
-        &__flex {
-            display: flex;
-            flex-flow: row;
-            padding-top: 40px;
-        }
-
-        &__small {
-
-            &-head {
-                margin-bottom: 24px;
-            }
-            &-body {
-                margin-bottom: 56px;
-            }
-        }
-
-        &__tags {
-            margin-bottom: 48px;
-        }
-
-        &__edit {
-            &-wrapper {
-                padding-top: 40px;
-            }
-        }
+  .indet {
+    &__heading {
+      margin-bottom: 14px;
     }
+
+    &__div {
+      margin: 48px 12.5vw;
+      width: 75vw;
+    }
+
+    &__description {
+      width: 52%;
+    }
+
+    &__flex {
+      display: flex;
+      flex-flow: row;
+      padding-top: 40px;
+    }
+
+    &__small {
+      &-head {
+        margin-bottom: 24px;
+      }
+      &-body {
+        margin-bottom: 56px;
+      }
+    }
+
+    &__tags {
+      margin-bottom: 48px;
+    }
+
+    &__edit {
+      &-wrapper {
+        padding-top: 40px;
+      }
+    }
+  }
 }
