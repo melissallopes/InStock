@@ -46,6 +46,10 @@
     margin: 7vw;
     margin-left: 0;
   }
+  &__link {
+    text-decoration: none;
+    color: $black;
+  }
   &__itens-bold {
     font-family: "AvenirDemi";
     font-size: 15px;
@@ -53,14 +57,32 @@
     margin-left: 0;
   }
   &__icon {
-    display: none;
-  }
-  &__icon-mobile {
-    float: right;
+    border: none;
+    cursor: pointer;
+    background: none;
     &:active {
-      color: $black;
+      filter: invert(1);
     }
   }
+
+  &__remove-button-mobile {
+    width: 30vw;
+    height: 12vw;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    color: #323232;
+    background-color: #fff;
+    position: absolute;
+    left: 65vw;
+    top: 87vw;
+  }
+  &__remove-button-desk {
+    display: none;
+  }
+}
+.inventory__div {
+  position: relative;
 }
 
 .inventory__button {
@@ -72,21 +94,34 @@
   color: $mercury;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+
+  &.btn-del {
+    position: absolute;
+    width: max-content;
+    height: auto;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #e1e1e1;
+    bottom: -15px;
+    right: 3%;
+    box-shadow: 0px 35px 27px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @include medium {
   .inventory {
     &__title {
       margin: 4vw;
-      margin-right: 10vw;
-      font-size: 30px;
+      margin-right: 5vw;
     }
     &__div {
-      height: 13vw;
       border-bottom: solid 0.15vw $mercury;
       display: flex;
-      margin: 3.1vw;
       align-items: center;
+      margin: 20px;
+      padding: 0 0 20px;
     }
     &__initial {
       display: flex;
@@ -139,7 +174,7 @@
     }
     &__itens-bold {
       width: 33vw;
-      margin: 1vw auto;
+      margin: 0 0 10px;
     }
     &__icon {
       display: inline-block;
@@ -151,6 +186,21 @@
     }
     &__icon-mobile {
       display: none;
+    }
+    &__remove-button-mobile {
+      display: none;
+    }
+    &__remove-button-desk {
+      display: inline-block;
+      width: 15vw;
+      position: absolute;
+      box-sizing: border-box;
+      border: 0.1vw solid #e1e1e1;
+      right: 4vw;
+      top: 35vw;
+      background-color: white;
+      padding: 1.2vw 3.2vw;
+      text-align: center;
     }
   }
 }
@@ -233,6 +283,13 @@
     &__order {
       display: flex;
       align-items: center;
+    }
+    &__remove-button-desk {
+      right: 14vw;
+      top: 17.5vw;
+      background-color: white;
+      padding: 1vw 1.5vw;
+      text-align: center;
     }
   }
 }

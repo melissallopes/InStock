@@ -1,14 +1,16 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function writeJSONFile(filename, content) {
-	fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err) => {
-		if (err) {
-			console.log(err);
-		}
-	});
-	console.log(`changes saved to file ${filename}....`);
+  console.log(filename);
+  console.log(content);
+  fs.writeFileSync(filename, JSON.stringify(content), "utf8", err => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log(`changes saved to file ${filename}....`);
 }
 
 module.exports = {
-	writeJSONFile
+  writeJSONFile
 };
