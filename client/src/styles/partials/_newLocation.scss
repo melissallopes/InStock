@@ -87,29 +87,6 @@
 }
 
 .newBigPage {
-<<<<<<< HEAD
-	position: fixed;
-	z-index: 1;
-	margin-top: -1666px;
-	margin-left: 11.875vw;
-	width: 100vw;
-	height: 100vh;
-	
-
-
-	&-flex {
-		width: 70vw;
-		background-color: white;
-		box-shadow: 0 0 999px 999px rgba(66, 66, 66, 0.666);
-		border: 1px solid black;
-		border-radius: 5px;
-		margin: 0;
-		padding: 0;
-
-
-
-
-=======
 	position: absolute;
 	display: flex;
 	z-index: 10;
@@ -134,7 +111,6 @@
 	&-div {
 		display: flex;
 		justify-content: space-around;
->>>>>>> master
 	}
 }
 
