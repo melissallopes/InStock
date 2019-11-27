@@ -121,7 +121,8 @@ class Inventory extends React.Component {
     if (this.state.inventory) {
       const InventoryList = inventory.map(product => {
         return (
-          <div className="inventory__div">
+          <div className="inventory__flex">
+            <div  className="inventory__div">
             <div className="inventory__item">
               <h2 className="inventory__label">ITEM</h2>
               <Link
@@ -154,8 +155,9 @@ class Inventory extends React.Component {
             {product.showing ? (
               <button className="inventory__button btn-del">Remove</button>
             ) : null}
-
-            <button
+          </div>
+            <div>
+              <button
               className="inventory__icon"
               onClick={() => {
                 this.setState({
@@ -165,6 +167,7 @@ class Inventory extends React.Component {
             >
               <img src={kebabIcon} />
             </button>
+            </div>
           </div>
         );
       });

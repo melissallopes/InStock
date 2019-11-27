@@ -15,8 +15,9 @@
 		opacity: 1;
 		padding: 2% 5%;
 	}
+
 	& h2 {
-		font-family: AvinirBold;
+		font-family: AvenirBold;
 		text-transform: capitalize;
 		margin-bottom: 5px;
 	}
@@ -67,4 +68,8 @@
 			height: 45px;
 		}
 	}
+}
+
+.uploadBig-selector .css-2b097c-container {
+	border: red solid 2px;
 }

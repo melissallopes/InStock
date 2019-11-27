@@ -100,7 +100,7 @@ export default class InventoryDetail extends React.Component {
         <div className="indet__div">
           <div className="indet__heading">
             <div className="indet__heading-sub">
-              <Link to={`/inventory`}>
+              <Link to={`/inventories`}>
                 <button type="button">
                   <img
                     src={BackArrow}
@@ -220,7 +220,7 @@ export default class InventoryDetail extends React.Component {
                     <p className="indet__info-body">{quantity}</p>
                   )}
                 </div>
-              </div>
+              
 
               <div className="indet__info-box">
                 <h4 className="indet__info-head">Status</h4>
@@ -233,6 +233,7 @@ export default class InventoryDetail extends React.Component {
                 ) : (
                   <p className="indet__info-body">{this.state.item.status}</p>
                 )}
+              </div>
               </div>
 
               <div className="indet__tags">
@@ -257,7 +258,7 @@ export default class InventoryDetail extends React.Component {
           </div>
           <div className="indet__edit-wrapper">
             {this.state.edit ? (
-              <div>
+              <div className="indet__edit-buttonsflex">
                 <button
                   onClick={this.Update}
                   type="button"
