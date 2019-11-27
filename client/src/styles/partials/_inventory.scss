@@ -1,4 +1,8 @@
 .inventory {
+  &__flex {
+    display: flex;
+  }
+
   &__div {
     border-bottom: solid 0.2vw $mercury;
     margin: 10vw 5vw;
@@ -60,6 +64,8 @@
     border: none;
     cursor: pointer;
     background: none;
+    margin-right: 5vw;
+    padding-top: 17.5vw;
     &:active {
       filter: invert(1);
     }
@@ -116,11 +122,15 @@
       margin: 4vw;
       margin-right: 5vw;
     }
+
+
+
     &__div {
       border-bottom: solid 0.15vw $mercury;
       display: flex;
       align-items: center;
       margin: 20px;
+      margin-right: 0;
       padding: 0 0 20px;
     }
     &__initial {
@@ -179,6 +189,10 @@
     &__icon {
       display: inline-block;
       margin: 1.5vw;
+      margin-top: 40px;
+      padding-top: 0;
+      margin-left: 0;
+      margin-right: 10.125vw;
 
       &:active {
         color: $black;
@@ -225,9 +239,15 @@
       justify-content: space-between;
       width: 75vw;
       height: 8vw;
-      margin: 0 auto;
+      margin: 0 12.5vw;
+      margin-right: 0;
       border-bottom: solid 0.1vw #e1e1e1;
     }
+
+    &__icon {
+      margin-top: 33%;
+    }
+
     &__input {
       width: 17.5vw;
       height: 2.5vw;
@@ -263,7 +283,7 @@
       text-align: center;
     }
     &__desk-label-item {
-      margin: 0;
+      margin-left: 0;
     }
     &__desk-label-itens {
       margin-right: 2.5vw;
@@ -272,6 +292,8 @@
       display: flex;
       align-items: center;
     }
+
+
     &__quantity {
       display: flex;
       align-items: center;

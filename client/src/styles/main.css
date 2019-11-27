@@ -145,6 +145,12 @@
   }
 }
 
+.inventory__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .inventory__div {
   border-bottom: solid 0.2vw #e1e1e1;
   margin: 10vw 5vw;
@@ -214,6 +220,8 @@
   border: none;
   cursor: pointer;
   background: none;
+  margin-right: 5vw;
+  padding-top: 17.5vw;
 }
 
 .inventory__icon:active {
@@ -286,6 +294,7 @@
         -ms-flex-align: center;
             align-items: center;
     margin: 20px;
+    margin-right: 0;
     padding: 0 0 20px;
   }
   .inventory__initial {
@@ -347,6 +356,10 @@
   .inventory__icon {
     display: inline-block;
     margin: 1.5vw;
+    margin-top: 40px;
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 10.125vw;
   }
   .inventory__icon:active {
     color: #323232;
@@ -396,8 +409,12 @@
             justify-content: space-between;
     width: 75vw;
     height: 8vw;
-    margin: 0 auto;
+    margin: 0 12.5vw;
+    margin-right: 0;
     border-bottom: solid 0.1vw #e1e1e1;
+  }
+  .inventory__icon {
+    margin-top: 33%;
   }
   .inventory__input {
     width: 17.5vw;
@@ -433,7 +450,7 @@
     text-align: center;
   }
   .inventory__desk-label-item {
-    margin: 0;
+    margin-left: 0;
   }
   .inventory__desk-label-itens {
     margin-right: 2.5vw;
@@ -1167,7 +1184,7 @@
   color: #323232;
 }
 
-.indet__description {
+.indet__fription {
   margin-bottom: 32px;
 }
 
@@ -1200,50 +1217,50 @@
 
 .indet__input-edit-desc {
   width: 80vw;
-  height: 40vw;
-  padding: 3vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
+  width: 90vw;
 }
 
 .indet__input-edit-order-by {
   width: 75vw;
-  height: 15vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
-  padding: 3vw;
+  width: 90vw;
 }
 
 .indet__input-edit-ref {
   width: 75vw;
-  height: 15vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
-  padding: 3vw;
+  width: 90vw;
 }
 
 .indet__input-edit-order {
   width: 75vw;
-  height: 15vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
-  padding: 3vw;
+  width: 90vw;
 }
 
 .indet__input-edit-location {
@@ -1251,35 +1268,37 @@
   height: 15vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
   padding: 3vw;
+  width: 90vw;
 }
 
 .indet__input-edit-quant {
   width: 75vw;
-  height: 15vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
-  padding: 3vw;
+  width: 90vw;
 }
 
 .indet__input-edit-categ {
   width: 75vw;
-  height: 15vw;
+  padding: 15px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.4vw solid #e1e1e1;
-  border-radius: 1.2vw;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
   background-color: #fafafa;
   resize: none;
-  padding: 3vw;
+  height: 100px;
+  width: 90vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1335,9 +1354,36 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .indet__edit-cancel {
+    width: 50px;
+    margin-right: 40px;
+  }
+  .indet__edit-buttonsflex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+  }
+  .indet__input-edit-desc {
+    width: 66.67vw;
+    height: 100px;
+    padding-top: 0;
+  }
+  .indet__input-edit-order-by, .indet__input-edit-ref, .indet__input-edit-order, .indet__input-edit-quant {
+    width: 30vw;
+    margin-right: 5vw;
+  }
+  .indet__input-edit-categ {
+    width: 66.67vw;
+    height: 100px;
+    padding-top: 0;
+  }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
   .indet__heading {
     margin-bottom: 14px;
   }
@@ -1370,6 +1416,22 @@
   .indet__edit-wrapper {
     padding-top: 40px;
   }
+  .indet__input-edit-desc {
+    width: 35vw;
+    height: 100px;
+    padding-top: 0;
+    margin-right: 10vw;
+  }
+  .indet__input-edit-order-by, .indet__input-edit-ref, .indet__input-edit-order, .indet__input-edit-quant {
+    width: 15vw;
+    margin-right: 2.7vw;
+    height: 10px;
+  }
+  .indet__input-edit-categ {
+    width: 35vw;
+    height: 100px;
+    padding-top: 0;
+  }
 }
 
 .uploadBig {
@@ -1399,7 +1461,7 @@
 }
 
 .uploadBig h2 {
-  font-family: AvinirBold;
+  font-family: AvenirBold;
   text-transform: capitalize;
   margin-bottom: 5px;
 }
@@ -1470,6 +1532,10 @@
   }
 }
 
+.uploadBig-selector .css-2b097c-container {
+  border: red solid 2px;
+}
+
 *,
 html,
 body {
@@ -1480,11 +1546,34 @@ body {
   font-family: AvenirRegular;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 button:focus {
   outline: none;
 }
 
 .css-2b097c-container {
-  width: 100%;
+  width: 90vw;
+}
+
+.uploadBig-selector .css-2b097c-container {
+  width: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .css-2b097c-container {
+    width: 30vw;
+    margin-right: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .css-2b097c-container {
+    width: 15vw;
+    margin-right: 2.7vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */

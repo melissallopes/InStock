@@ -19,10 +19,35 @@ body {
   font-family: AvenirRegular;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 button:focus {
   outline: none;
 }
 
 .css-2b097c-container {
-  width: 100%;
+  width: 90vw;
+}
+
+
+.uploadBig-selector .css-2b097c-container {
+	width: 20px;
+}
+
+@include medium {
+  .css-2b097c-container {
+    width: 30vw;
+    margin-right: 5vw;
+  }
+}
+
+@include huge {
+  .css-2b097c-container {
+    width: 15vw;
+    margin-right: 2.7vw;
+
+  }
 }

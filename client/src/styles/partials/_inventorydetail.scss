@@ -79,7 +79,7 @@
     }
   }
 
-  &__description {
+  &__fription {
     margin-bottom: 32px;
   }
 
@@ -111,74 +111,83 @@
 
   &__input-edit-desc {
     width: 80vw;
-    height: 40vw;
-    padding: 3vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
+    width: 90vw;
+
   }
   &__input-edit-order-by {
     //    margin-left: 5vw;
     width: 75vw;
-    height: 15vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
-    padding: 3vw;
+    width: 90vw;
+
   }
   &__input-edit-ref {
     width: 75vw;
-    height: 15vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
-    padding: 3vw;
+    width: 90vw;
+
   }
   &__input-edit-order {
     width: 75vw;
-    height: 15vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
-    padding: 3vw;
+    width: 90vw;
+
   }
   &__input-edit-location {
     width: 75vw;
     height: 15vw;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
     padding: 3vw;
+    width: 90vw;
+
   }
   &__input-edit-quant {
     width: 75vw;
-    height: 15vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
-    padding: 3vw;
+    width: 90vw;
+
   }
   &__input-edit-categ {
     width: 75vw;
-    height: 15vw;
+    padding: 15px 5px;
     box-sizing: border-box;
-    border: 0.4vw solid #e1e1e1;
-    border-radius: 1.2vw;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
     background-color: #fafafa;
     resize: none;
-    padding: 3vw;
+    height: 100px;
+    width: 90vw;
+
   }
 }
 
@@ -200,6 +209,7 @@
     }
 
     &__details {
+      
       &-small {
         display: flex;
         flex-flow: row wrap;
@@ -228,7 +238,37 @@
         display: flex;
         justify-content: flex-end;
       }
+
+      &-cancel {
+        width: 50px;
+        margin-right: 40px;
+      }
+
+      &-buttonsflex {
+        display: flex;
+        flex-flow: row-reverse;
+      }
     }
+
+      &__input-edit {
+        &-desc {
+          width: 66.67vw;
+          height: 100px;
+          padding-top: 0;
+        }
+
+        &-order-by, &-ref, &-order, &-quant {
+          width: 30vw;
+          margin-right: 5vw;
+      }
+
+      &-categ {
+        width: 66.67vw;
+        height: 100px;
+        padding-top: 0;
+
+      }
+    
   }
 }
 
@@ -271,5 +311,32 @@
         padding-top: 40px;
       }
     }
+
+    &__input-edit {
+      &-desc {
+        width: 35vw;
+        height: 100px;
+        padding-top: 0;
+        margin-right: 10vw;
+      }
+
+      &-order-by, &-ref, &-order, &-quant {
+        width: 15vw;
+        margin-right: 2.7vw;
+        height: 10px;
+    }
+
+    &-categ {
+      width: 35vw;
+      height: 100px;
+      padding-top: 0;
+
+    }
+  
+}
+
+
+
   }
+}
 }
